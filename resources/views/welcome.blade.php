@@ -1,514 +1,756 @@
 <!DOCTYPE html>
-<html lang="en" data-bs-theme="auto">
-
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <meta name="generator" content="Astro v5.13.2">
-    <title>Blog Template · Bootstrap v5.3</title>
-    <link rel="canonical" href="https://getbootstrap.comhttps://getbootstrap.com/docs/5.3/examples/blog/">
-    <script src="https://getbootstrap.com/docs/5.3/assets/js/color-modes.js"></script>
-    <link href="https://getbootstrap.com/docs/5.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB">
-    <link rel="apple-touch-icon" href="https://getbootstrap.com/docs/5.3/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
-    <link rel="icon" href="https://getbootstrap.com/docs/5.3/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
-    <link rel="icon" href="https://getbootstrap.com/docs/5.3/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
-    <link rel="manifest" href="https://getbootstrap.com/docs/5.3/assets/img/favicons/manifest.json">
-    <link rel="mask-icon" href="https://getbootstrap.com/docs/5.3/assets/img/favicons/safari-pinned-tab.svg" color="#712cf9">
-    <link rel="icon" href="https://getbootstrap.com/docs/5.3/assets/img/favicons/favicon.ico">
-    <meta name="theme-color" content="#712cf9">
-    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900&display=swap" rel="stylesheet">
-    <link href="blog.css" rel="stylesheet">
-    <style>
-        .bd-placeholder-img {
-            font-size: 1.125rem;
-            text-anchor: middle;
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            user-select: none
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TemplateMo 622 Clearwave</title>
+  <!--
+  TemplateMo 622 Clearwave
+  https://templatemo.com/tm-622-clearwave
+  Free for personal and commercial use
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,300&family=Playfair+Display:ital,wght@0,700;1,600&display=swap" rel="stylesheet" />
 
-        @media (min-width: 768px) {
-            .bd-placeholder-img-lg {
-                font-size: 3.5rem
-            }
-        }
-
-        .b-example-divider {
-            width: 100%;
-            height: 3rem;
-            background-color: #0000001a;
-            border: solid rgba(0, 0, 0, .15);
-            border-width: 1px 0;
-            box-shadow: inset 0 .5em 1.5em #0000001a, inset 0 .125em .5em #00000026
-        }
-
-        .b-example-vr {
-            flex-shrink: 0;
-            width: 1.5rem;
-            height: 100vh
-        }
-
-        .bi {
-            vertical-align: -.125em;
-            fill: currentColor
-        }
-
-        .nav-scroller {
-            position: relative;
-            z-index: 2;
-            height: 2.75rem;
-            overflow-y: hidden
-        }
-
-        .nav-scroller .nav {
-            display: flex;
-            flex-wrap: nowrap;
-            padding-bottom: 1rem;
-            margin-top: -1px;
-            overflow-x: auto;
-            text-align: center;
-            white-space: nowrap;
-            -webkit-overflow-scrolling: touch
-        }
-
-        .btn-bd-primary {
-            --bd-violet-bg: #712cf9;
-            --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
-            --bs-btn-font-weight: 600;
-            --bs-btn-color: var(--bs-white);
-            --bs-btn-bg: var(--bd-violet-bg);
-            --bs-btn-border-color: var(--bd-violet-bg);
-            --bs-btn-hover-color: var(--bs-white);
-            --bs-btn-hover-bg: #6528e0;
-            --bs-btn-hover-border-color: #6528e0;
-            --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
-            --bs-btn-active-color: var(--bs-btn-hover-color);
-            --bs-btn-active-bg: #5a23c8;
-            --bs-btn-active-border-color: #5a23c8
-        }
-
-        .bd-mode-toggle {
-            z-index: 1500
-        }
-
-        .bd-mode-toggle .bi {
-            width: 1em;
-            height: 1em
-        }
-
-        .bd-mode-toggle .dropdown-menu .active .bi {
-            display: block !important
-        }
-    </style>
+  <link rel="stylesheet" href="https://templatemo.com/templates/templatemo_622_clearwave/templatemo-622-clearwave.css" />
 </head>
+<body>
 
-<body> <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
-        <symbol id="check2" viewBox="0 0 16 16">
-            <path
-                d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z">
-            </path>
-        </symbol>
-        <symbol id="circle-half" viewBox="0 0 16 16">
-            <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"></path>
-        </symbol>
-        <symbol id="moon-stars-fill" viewBox="0 0 16 16">
-            <path
-                d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z">
-            </path>
-            <path
-                d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z">
-            </path>
-        </symbol>
-        <symbol id="sun-fill" viewBox="0 0 16 16">
-            <path
-                d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z">
-            </path>
-        </symbol>
-    </svg>
-    <div class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle"> <button
-            class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center" id="bd-theme" type="button"
-            aria-expanded="false" data-bs-toggle="dropdown" aria-label="Toggle theme (auto)"> <svg
-                class="bi my-1 theme-icon-active" aria-hidden="true">
-                <use href="#circle-half"></use>
-            </svg> <span class="visually-hidden" id="bd-theme-text">Toggle theme</span> </button>
-        <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bd-theme-text">
-            <li> <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light"
-                    aria-pressed="false"> <svg class="bi me-2 opacity-50" aria-hidden="true">
-                        <use href="#sun-fill"></use>
-                    </svg>
-                    Light
-                    <svg class="bi ms-auto d-none" aria-hidden="true">
-                        <use href="#check2"></use>
-                    </svg> </button> </li>
-            <li> <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark"
-                    aria-pressed="false"> <svg class="bi me-2 opacity-50" aria-hidden="true">
-                        <use href="#moon-stars-fill"></use>
-                    </svg>
-                    Dark
-                    <svg class="bi ms-auto d-none" aria-hidden="true">
-                        <use href="#check2"></use>
-                    </svg> </button> </li>
-            <li> <button type="button" class="dropdown-item d-flex align-items-center active"
-                    data-bs-theme-value="auto" aria-pressed="true"> <svg class="bi me-2 opacity-50" aria-hidden="true">
-                        <use href="#circle-half"></use>
-                    </svg>
-                    Auto
-                    <svg class="bi ms-auto d-none" aria-hidden="true">
-                        <use href="#check2"></use>
-                    </svg> </button> </li>
-        </ul>
-    </div> <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
-        <symbol id="aperture" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-            stroke-width="2" viewBox="0 0 24 24">
-            <circle cx="12" cy="12" r="10"></circle>
-            <path
-                d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94">
-            </path>
-        </symbol>
-        <symbol id="cart" viewBox="0 0 16 16">
-            <path
-                d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z">
-            </path>
-        </symbol>
-        <symbol id="chevron-right" viewBox="0 0 16 16">
-            <path fill-rule="evenodd"
-                d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z">
-            </path>
-        </symbol>
-    </svg>
-    <div class="container">
-        <header class="border-bottom lh-1 py-3">
-            <div class="row flex-nowrap justify-content-between align-items-center">
-                <div class="col-4 pt-1"> <a class="link-secondary" href="#">Subscribe</a> </div>
-                <div class="col-4 text-center"> <a class="blog-header-logo text-body-emphasis text-decoration-none"
-                        href="#">Large</a> </div>
-                <div class="col-4 d-flex justify-content-end align-items-center"> <a class="link-secondary"
-                        href="#" aria-label="Search"> <svg xmlns="http://www.w3.org/2000/svg" width="20"
-                            height="20" fill="none" stroke="currentColor" stroke-linecap="round"
-                            stroke-linejoin="round" stroke-width="2" class="mx-3" role="img"
-                            viewBox="0 0 24 24">
-                            <title>Search</title>
-                            <circle cx="10.5" cy="10.5" r="7.5"></circle>
-                            <path d="M21 21l-5.2-5.2"></path>
-                        </svg> </a> <a class="btn btn-sm btn-outline-secondary" href="#">Sign up</a> </div>
-            </div>
-        </header>
-        <div class="nav-scroller py-1 mb-3 border-bottom">
-            <nav class="nav nav-underline justify-content-between"> <a
-                    class="nav-item nav-link link-body-emphasis active" href="#">World</a> <a
-                    class="nav-item nav-link link-body-emphasis" href="#">U.S.</a> <a
-                    class="nav-item nav-link link-body-emphasis" href="#">Technology</a> <a
-                    class="nav-item nav-link link-body-emphasis" href="#">Design</a> <a
-                    class="nav-item nav-link link-body-emphasis" href="#">Culture</a> <a
-                    class="nav-item nav-link link-body-emphasis" href="#">Business</a> <a
-                    class="nav-item nav-link link-body-emphasis" href="#">Politics</a> <a
-                    class="nav-item nav-link link-body-emphasis" href="#">Opinion</a> <a
-                    class="nav-item nav-link link-body-emphasis" href="#">Science</a> <a
-                    class="nav-item nav-link link-body-emphasis" href="#">Health</a> <a
-                    class="nav-item nav-link link-body-emphasis" href="#">Style</a> <a
-                    class="nav-item nav-link link-body-emphasis" href="#">Travel</a> </nav>
-        </div>
+  <!-- ── MOBILE MENU ── -->
+  <div class="mobile-menu" id="mobileMenu" role="dialog" aria-modal="true" aria-label="Navigation">
+    <a href="#screens">App</a>
+    <a href="#features">Features</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#testimonials">Reviews</a>
+    <a href="#integrations">Integrations</a>
+    <a href="#faq">FAQ</a>
+    <a href="#" class="mobile-cta btn-primary">Start Free Trial</a>
+  </div>
+
+  <!-- ── 1. NAV ── -->
+  <nav class="nav" id="mainNav" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">clear<span>wave</span></a>
+      <ul class="nav-links" role="list">
+        <li><a href="#screens">App</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#testimonials">Reviews</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+      <div class="nav-cta">
+        <a href="#" class="btn-ghost">Sign in</a>
+        <a href="#" class="btn-primary">Start Free Trial</a>
+      </div>
+      <button class="nav-hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
     </div>
-    <main class="container">
-        <div class="p-4 p-md-5 mb-4 rounded text-body-emphasis bg-body-secondary">
-            <div class="col-lg-6 px-0">
-                <h1 class="display-4 fst-italic">Title of a longer featured blog post</h1>
-                <p class="lead my-3">Multiple lines of text that form the lede, informing new readers quickly and
-                    efficiently about what’s most interesting in this post’s contents.</p>
-                <p class="lead mb-0"><a href="#" class="text-body-emphasis fw-bold">Continue reading...</a></p>
-            </div>
-        </div>
-        <div class="row mb-2">
-            <div class="col-md-6">
-                <div
-                    class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-                    <div class="col p-4 d-flex flex-column position-static"> <strong
-                            class="d-inline-block mb-2 text-primary-emphasis">World</strong>
-                        <h3 class="mb-0">Featured post</h3>
-                        <div class="mb-1 text-body-secondary">Nov 12</div>
-                        <p class="card-text mb-auto">This is a wider card with supporting text below as a natural
-                            lead-in to additional content.</p> <a href="#"
-                            class="icon-link gap-1 icon-link-hover stretched-link">
-                            Continue reading
-                            <svg class="bi" aria-hidden="true">
-                                <use xlink:href="#chevron-right"></use>
-                            </svg> </a>
-                    </div>
-                    <div class="col-auto d-none d-lg-block"> <svg aria-label="Placeholder: Thumbnail"
-                            class="bd-placeholder-img " height="250" preserveAspectRatio="xMidYMid slice"
-                            role="img" width="200" xmlns="http://www.w3.org/2000/svg">
-                            <title>Placeholder</title>
-                            <rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%"
-                                fill="#eceeef" dy=".3em">Thumbnail</text>
-                        </svg> </div>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div
-                    class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-                    <div class="col p-4 d-flex flex-column position-static"> <strong
-                            class="d-inline-block mb-2 text-success-emphasis">Design</strong>
-                        <h3 class="mb-0">Post title</h3>
-                        <div class="mb-1 text-body-secondary">Nov 11</div>
-                        <p class="mb-auto">This is a wider card with supporting text below as a natural lead-in to
-                            additional content.</p> <a href="#"
-                            class="icon-link gap-1 icon-link-hover stretched-link">
-                            Continue reading
-                            <svg class="bi" aria-hidden="true">
-                                <use xlink:href="#chevron-right"></use>
-                            </svg> </a>
-                    </div>
-                    <div class="col-auto d-none d-lg-block"> <svg aria-label="Placeholder: Thumbnail"
-                            class="bd-placeholder-img " height="250" preserveAspectRatio="xMidYMid slice"
-                            role="img" width="200" xmlns="http://www.w3.org/2000/svg">
-                            <title>Placeholder</title>
-                            <rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%"
-                                fill="#eceeef" dy=".3em">Thumbnail</text>
-                        </svg> </div>
-                </div>
-            </div>
-        </div>
-        <div class="row g-5">
-            <div class="col-md-8">
-                <h3 class="pb-4 mb-4 fst-italic border-bottom">
-                    From the Firehose
-                </h3>
-                <article class="blog-post">
-                    <h2 class="display-5 link-body-emphasis mb-1">Sample blog post</h2>
-                    <p class="blog-post-meta">January 1, 2021 by <a href="#">Mark</a></p>
-                    <p>This blog post shows a few different types of content that’s supported and styled with Bootstrap.
-                        Basic typography, lists, tables, images, code, and more are all supported as expected.</p>
-                    <hr>
-                    <p>This is some additional paragraph placeholder content. It has been written to fill the available
-                        space and show how a longer snippet of text affects the surrounding content. We'll repeat it
-                        often to keep the demonstration flowing, so be on the lookout for this exact same string of
-                        text.</p>
-                    <h2>Blockquotes</h2>
-                    <p>This is an example blockquote in action:</p>
-                    <blockquote class="blockquote">
-                        <p>Quoted text goes here.</p>
-                    </blockquote>
-                    <p>This is some additional paragraph placeholder content. It has been written to fill the available
-                        space and show how a longer snippet of text affects the surrounding content. We'll repeat it
-                        often to keep the demonstration flowing, so be on the lookout for this exact same string of
-                        text.</p>
-                    <h3>Example lists</h3>
-                    <p>This is some additional paragraph placeholder content. It's a slightly shorter version of the
-                        other highly repetitive body text used throughout. This is an example unordered list:</p>
-                    <ul>
-                        <li>First list item</li>
-                        <li>Second list item with a longer description</li>
-                        <li>Third list item to close it out</li>
-                    </ul>
-                    <p>And this is an ordered list:</p>
-                    <ol>
-                        <li>First list item</li>
-                        <li>Second list item with a longer description</li>
-                        <li>Third list item to close it out</li>
-                    </ol>
-                    <p>And this is a definition list:</p>
-                    <dl>
-                        <dt>HyperText Markup Language (HTML)</dt>
-                        <dd>The language used to describe and define the content of a Web page</dd>
-                        <dt>Cascading Style Sheets (CSS)</dt>
-                        <dd>Used to describe the appearance of Web content</dd>
-                        <dt>JavaScript (JS)</dt>
-                        <dd>The programming language used to build advanced Web sites and applications</dd>
-                    </dl>
-                    <h2>Inline HTML elements</h2>
-                    <p>HTML defines a long list of available inline tags, a complete list of which can be found on the
-                        <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element">Mozilla Developer
-                            Network</a>.</p>
-                    <ul>
-                        <li><strong>To bold text</strong>, use <code
-                                class="language-plaintext highlighter-rouge">&lt;strong&gt;</code>.</li>
-                        <li><em>To italicize text</em>, use <code
-                                class="language-plaintext highlighter-rouge">&lt;em&gt;</code>.</li>
-                        <li>Abbreviations, like <abbr title="HyperText Markup Language">HTML</abbr> should use <code
-                                class="language-plaintext highlighter-rouge">&lt;abbr&gt;</code>, with an optional
-                            <code class="language-plaintext highlighter-rouge">title</code> attribute for the full
-                            phrase.</li>
-                        <li>Citations, like <cite>— Mark Otto</cite>, should use <code
-                                class="language-plaintext highlighter-rouge">&lt;cite&gt;</code>.</li>
-                        <li><del>Deleted</del> text should use <code
-                                class="language-plaintext highlighter-rouge">&lt;del&gt;</code> and <ins>inserted</ins>
-                            text should use <code class="language-plaintext highlighter-rouge">&lt;ins&gt;</code>.</li>
-                        <li>Superscript <sup>text</sup> uses <code
-                                class="language-plaintext highlighter-rouge">&lt;sup&gt;</code> and subscript
-                            <sub>text</sub> uses <code class="language-plaintext highlighter-rouge">&lt;sub&gt;</code>.
-                        </li>
-                    </ul>
-                    <p>Most of these elements are styled by browsers with few modifications on our part.</p>
-                    <h2>Heading</h2>
-                    <p>This is some additional paragraph placeholder content. It has been written to fill the available
-                        space and show how a longer snippet of text affects the surrounding content. We'll repeat it
-                        often to keep the demonstration flowing, so be on the lookout for this exact same string of
-                        text.</p>
-                    <h3>Sub-heading</h3>
-                    <p>This is some additional paragraph placeholder content. It has been written to fill the available
-                        space and show how a longer snippet of text affects the surrounding content. We'll repeat it
-                        often to keep the demonstration flowing, so be on the lookout for this exact same string of
-                        text.</p>
-                    <pre><code>Example code block</code></pre>
-                    <p>This is some additional paragraph placeholder content. It's a slightly shorter version of the
-                        other highly repetitive body text used throughout.</p>
-                </article>
-                <article class="blog-post">
-                    <h2 class="display-5 link-body-emphasis mb-1">Another blog post</h2>
-                    <p class="blog-post-meta">December 23, 2020 by <a href="#">Jacob</a></p>
-                    <p>This is some additional paragraph placeholder content. It has been written to fill the available
-                        space and show how a longer snippet of text affects the surrounding content. We'll repeat it
-                        often to keep the demonstration flowing, so be on the lookout for this exact same string of
-                        text.</p>
-                    <blockquote>
-                        <p>Longer quote goes here, maybe with some <strong>emphasized text</strong> in the middle of it.
-                        </p>
-                    </blockquote>
-                    <p>This is some additional paragraph placeholder content. It has been written to fill the available
-                        space and show how a longer snippet of text affects the surrounding content. We'll repeat it
-                        often to keep the demonstration flowing, so be on the lookout for this exact same string of
-                        text.</p>
-                    <h3>Example table</h3>
-                    <p>And don't forget about tables in these posts:</p>
-                    <table class="table">
-                        <thead>
-                            <tr>
-                                <th>Name</th>
-                                <th>Upvotes</th>
-                                <th>Downvotes</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Alice</td>
-                                <td>10</td>
-                                <td>11</td>
-                            </tr>
-                            <tr>
-                                <td>Bob</td>
-                                <td>4</td>
-                                <td>3</td>
-                            </tr>
-                            <tr>
-                                <td>Charlie</td>
-                                <td>7</td>
-                                <td>9</td>
-                            </tr>
-                        </tbody>
-                        <tfoot>
-                            <tr>
-                                <td>Totals</td>
-                                <td>21</td>
-                                <td>23</td>
-                            </tr>
-                        </tfoot>
-                    </table>
-                    <p>This is some additional paragraph placeholder content. It's a slightly shorter version of the
-                        other highly repetitive body text used throughout.</p>
-                </article>
-                <article class="blog-post">
-                    <h2 class="display-5 link-body-emphasis mb-1">New feature</h2>
-                    <p class="blog-post-meta">December 14, 2020 by <a href="#">Chris</a></p>
-                    <p>This is some additional paragraph placeholder content. It has been written to fill the available
-                        space and show how a longer snippet of text affects the surrounding content. We'll repeat it
-                        often to keep the demonstration flowing, so be on the lookout for this exact same string of
-                        text.</p>
-                    <ul>
-                        <li>First list item</li>
-                        <li>Second list item with a longer description</li>
-                        <li>Third list item to close it out</li>
-                    </ul>
-                    <p>This is some additional paragraph placeholder content. It's a slightly shorter version of the
-                        other highly repetitive body text used throughout.</p>
-                </article>
-                <nav class="blog-pagination" aria-label="Pagination"> <a class="btn btn-outline-primary rounded-pill"
-                        href="#">Older</a> <a class="btn btn-outline-secondary rounded-pill disabled"
-                        aria-disabled="true">Newer</a> </nav>
-            </div>
-            <div class="col-md-4">
-                <div class="position-sticky" style="top: 2rem;">
-                    <div class="p-4 mb-3 bg-body-tertiary rounded">
-                        <h4 class="fst-italic">About</h4>
-                        <p class="mb-0">Customize this section to tell your visitors a little bit about your
-                            publication, writers, content, or something else entirely. Totally up to you.</p>
-                    </div>
-                    <div>
-                        <h4 class="fst-italic">Recent posts</h4>
-                        <ul class="list-unstyled">
-                            <li> <a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top"
-                                    href="#"> <svg aria-hidden="true" class="bd-placeholder-img "
-                                        height="96" preserveAspectRatio="xMidYMid slice" width="100%"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <rect width="100%" height="100%" fill="#777"></rect>
-                                    </svg>
-                                    <div class="col-lg-8">
-                                        <h6 class="mb-0">Example blog post title</h6> <small
-                                            class="text-body-secondary">January 15, 2024</small>
-                                    </div>
-                                </a> </li>
-                            <li> <a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top"
-                                    href="#"> <svg aria-hidden="true" class="bd-placeholder-img "
-                                        height="96" preserveAspectRatio="xMidYMid slice" width="100%"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <rect width="100%" height="100%" fill="#777"></rect>
-                                    </svg>
-                                    <div class="col-lg-8">
-                                        <h6 class="mb-0">This is another blog post title</h6> <small
-                                            class="text-body-secondary">January 14, 2024</small>
-                                    </div>
-                                </a> </li>
-                            <li> <a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top"
-                                    href="#"> <svg aria-hidden="true" class="bd-placeholder-img "
-                                        height="96" preserveAspectRatio="xMidYMid slice" width="100%"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <rect width="100%" height="100%" fill="#777"></rect>
-                                    </svg>
-                                    <div class="col-lg-8">
-                                        <h6 class="mb-0">Longer blog post title: This one has multiple lines!</h6>
-                                        <small class="text-body-secondary">January 13, 2024</small>
-                                    </div>
-                                </a> </li>
-                        </ul>
-                    </div>
-                    <div class="p-4">
-                        <h4 class="fst-italic">Archives</h4>
-                        <ol class="list-unstyled mb-0">
-                            <li><a href="#">March 2021</a></li>
-                            <li><a href="#">February 2021</a></li>
-                            <li><a href="#">January 2021</a></li>
-                            <li><a href="#">December 2020</a></li>
-                            <li><a href="#">November 2020</a></li>
-                            <li><a href="#">October 2020</a></li>
-                            <li><a href="#">September 2020</a></li>
-                            <li><a href="#">August 2020</a></li>
-                            <li><a href="#">July 2020</a></li>
-                            <li><a href="#">June 2020</a></li>
-                            <li><a href="#">May 2020</a></li>
-                            <li><a href="#">April 2020</a></li>
-                        </ol>
-                    </div>
-                    <div class="p-4">
-                        <h4 class="fst-italic">Elsewhere</h4>
-                        <ol class="list-unstyled">
-                            <li><a href="#">GitHub</a></li>
-                            <li><a href="#">Social</a></li>
-                            <li><a href="#">Facebook</a></li>
-                        </ol>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </main>
-    <footer class="py-5 text-center text-body-secondary bg-body-tertiary">
-        <p>Blog template built for <a href="https://getbootstrap.com/">Bootstrap</a> by <a
-                href="https://x.com/mdo">@mdo</a>.</p>
-        <p class="mb-0"> <a href="#">Back to top</a> </p>
-    </footer>
-    <script src="https://getbootstrap.com/docs/5.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" class="astro-vvvwv3sm"></script>
-</body>
+  </nav>
 
+  <!-- ── 2. HERO ── -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-inner">
+        <div class="hero-content">
+          <div class="hero-badge reveal">
+            <div class="hero-badge-dot">✦</div>
+            <span>Rated <strong>#1 Productivity SaaS</strong> of 2024</span>
+          </div>
+          <h1 class="hero-title reveal reveal-delay-1">
+            Your workflow,<br><em>finally clear.</em>
+          </h1>
+          <p class="hero-sub reveal reveal-delay-2">
+            Clearwave unifies your team's projects, data, and communication into one calm, focused surface. Less noise, more done.
+          </p>
+          <div class="hero-actions reveal reveal-delay-3">
+            <a href="#" class="btn-primary-lg">
+              Start Free — No Card
+              <span class="btn-arrow">→</span>
+            </a>
+            <a href="#screens" class="btn-outline-lg">
+              <span>▶</span> See it in action
+            </a>
+          </div>
+          <div class="hero-trust reveal reveal-delay-4">
+            <div class="trust-item">
+              <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+              SOC 2 Certified
+            </div>
+            <div class="trust-divider"></div>
+            <div class="trust-item">
+              <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+              99.9% Uptime SLA
+            </div>
+            <div class="trust-divider"></div>
+            <div class="trust-item">
+              <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+              50k+ Teams
+            </div>
+          </div>
+        </div>
+        <div class="hero-visual reveal reveal-delay-2">
+          <div class="hero-dashboard">
+            <div class="dashboard-bar">
+              <div class="db-dot"></div><div class="db-dot"></div><div class="db-dot"></div>
+            </div>
+            <div class="dashboard-body">
+              <div class="db-header">
+                <div class="db-title">Team Performance</div>
+                <div class="db-tag">Live</div>
+              </div>
+              <div class="db-chart">
+                <div class="db-bar" style="height:35%"></div>
+                <div class="db-bar" style="height:55%"></div>
+                <div class="db-bar" style="height:42%"></div>
+                <div class="db-bar active" style="height:75%"></div>
+                <div class="db-bar" style="height:60%"></div>
+                <div class="db-bar active" style="height:88%"></div>
+                <div class="db-bar" style="height:70%"></div>
+                <div class="db-bar active" style="height:92%"></div>
+              </div>
+              <div class="db-stats">
+                <div class="db-stat">
+                  <div class="db-stat-val">94<span style="font-size:.9rem;color:var(--accent)">%</span></div>
+                  <div class="db-stat-label">Task Rate</div>
+                  <div class="db-stat-change">+12%</div>
+                </div>
+                <div class="db-stat">
+                  <div class="db-stat-val">2.4<span style="font-size:.9rem;color:var(--accent)">k</span></div>
+                  <div class="db-stat-label">Active Users</div>
+                  <div class="db-stat-change">+8%</div>
+                </div>
+                <div class="db-stat">
+                  <div class="db-stat-val">18<span style="font-size:.9rem;color:var(--accent)">h</span></div>
+                  <div class="db-stat-label">Saved / week</div>
+                  <div class="db-stat-change">+24%</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="hero-float-badge">
+            <div class="float-badge-icon">✦</div>
+            <div class="float-badge-text">
+              <strong>New integration</strong>
+              <span>Slack connected · just now</span>
+            </div>
+          </div>
+          <div class="hero-float-badge-2">
+            <div class="float-badge-2-val">↑ 34%</div>
+            <div class="float-badge-2-label">Output this week</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── 3. LOGO TICKER ── -->
+  <div class="ticker-section">
+    <div class="ticker-label">Trusted by forward-thinking teams at</div>
+    <div class="ticker-track-wrap">
+      <div class="ticker-track">
+        <!-- Set 1 -->
+        <div class="ticker-item"><div class="ticker-item-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="var(--accent)"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg></div>Nexaflow</div>
+        <div class="ticker-dot"></div>
+        <div class="ticker-item"><div class="ticker-item-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="var(--accent)"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg></div>Meridian</div>
+        <div class="ticker-dot"></div>
+        <div class="ticker-item"><div class="ticker-item-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="var(--accent)"><polygon points="12,2 22,20 2,20"/></svg></div>Vanta Labs</div>
+        <div class="ticker-dot"></div>
+        <div class="ticker-item"><div class="ticker-item-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="var(--accent)"><path d="M4 4h16v12H4z M8 20h8"/></svg></div>Pulsar HQ</div>
+        <div class="ticker-dot"></div>
+        <div class="ticker-item"><div class="ticker-item-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="var(--accent)"><circle cx="12" cy="7" r="4"/><path d="M4 21c0-4 3.6-7 8-7s8 3 8 7"/></svg></div>Arclight</div>
+        <div class="ticker-dot"></div>
+        <div class="ticker-item"><div class="ticker-item-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="var(--accent)"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/></svg></div>Korova Co.</div>
+        <div class="ticker-dot"></div>
+        <div class="ticker-item"><div class="ticker-item-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="var(--accent)"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div>Stratum IO</div>
+        <div class="ticker-dot"></div>
+        <div class="ticker-item"><div class="ticker-item-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="var(--accent)"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>Lumiq</div>
+        <div class="ticker-dot"></div>
+        <!-- Set 2 (duplicate for seamless loop) -->
+        <div class="ticker-item"><div class="ticker-item-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="var(--accent)"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg></div>Nexaflow</div>
+        <div class="ticker-dot"></div>
+        <div class="ticker-item"><div class="ticker-item-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="var(--accent)"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg></div>Meridian</div>
+        <div class="ticker-dot"></div>
+        <div class="ticker-item"><div class="ticker-item-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="var(--accent)"><polygon points="12,2 22,20 2,20"/></svg></div>Vanta Labs</div>
+        <div class="ticker-dot"></div>
+        <div class="ticker-item"><div class="ticker-item-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="var(--accent)"><path d="M4 4h16v12H4z M8 20h8"/></svg></div>Pulsar HQ</div>
+        <div class="ticker-dot"></div>
+        <div class="ticker-item"><div class="ticker-item-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="var(--accent)"><circle cx="12" cy="7" r="4"/><path d="M4 21c0-4 3.6-7 8-7s8 3 8 7"/></svg></div>Arclight</div>
+        <div class="ticker-dot"></div>
+        <div class="ticker-item"><div class="ticker-item-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="var(--accent)"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/></svg></div>Korova Co.</div>
+        <div class="ticker-dot"></div>
+        <div class="ticker-item"><div class="ticker-item-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="var(--accent)"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div>Stratum IO</div>
+        <div class="ticker-dot"></div>
+        <div class="ticker-item"><div class="ticker-item-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="var(--accent)"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>Lumiq</div>
+        <div class="ticker-dot"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── 5. 3D PHONE CAROUSEL ── -->
+  <section class="carousel-section" id="screens">
+    <div class="container">
+      <div class="carousel-header">
+        <div class="section-label reveal">Mobile App</div>
+        <h2 class="section-title reveal reveal-delay-1">Your workspace,<br><em>in your pocket</em></h2>
+        <p class="section-sub reveal reveal-delay-2">The Clearwave mobile app brings every dashboard, task, and notification to you — beautifully adapted for any screen.</p>
+      </div>
+    </div>
+    <div class="carousel-zoom">
+      <button class="zoom-btn" id="zoomOut" aria-label="Zoom out">−</button>
+      <div class="zoom-pips" id="zoomPips"></div>
+      <button class="zoom-btn" id="zoomIn" aria-label="Zoom in">+</button>
+    </div>
+
+    <div class="carousel-stage" id="carouselStage">
+      <div class="carousel-track" id="carouselTrack">
+
+        <!-- Phone screens: 5 different screen designs + extras for looping -->
+        <!-- We will render 7 cards and cycle positions -->
+
+        <div class="phone-card" data-pos="left2" data-index="0">
+          <div class="phone-shell">
+            <div class="phone-screen">
+              <img src="https://templatemo.com/templates/templatemo_622_clearwave/images/tm-622-screen-01.jpg" alt="App screen 1" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy" />
+            </div>
+          </div>
+
+        </div>
+
+        <div class="phone-card" data-pos="left1" data-index="1">
+          <div class="phone-shell">
+            <div class="phone-screen">
+              <img src="https://templatemo.com/templates/templatemo_622_clearwave/images/tm-622-screen-02.jpg" alt="App screen 2" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy" />
+            </div>
+          </div>
+
+        </div>
+
+        <div class="phone-card" data-pos="center" data-index="2">
+          <div class="phone-shell">
+            <div class="phone-screen">
+              <img src="https://templatemo.com/templates/templatemo_622_clearwave/images/tm-622-screen-03.jpg" alt="App screen 3" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy" />
+            </div>
+          </div>
+
+        </div>
+
+        <div class="phone-card" data-pos="right1" data-index="3">
+          <div class="phone-shell">
+            <div class="phone-screen">
+              <img src="https://templatemo.com/templates/templatemo_622_clearwave/images/tm-622-screen-04.jpg" alt="App screen 4" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy" />
+            </div>
+          </div>
+
+        </div>
+
+        <div class="phone-card" data-pos="right2" data-index="4">
+          <div class="phone-shell">
+            <div class="phone-screen">
+              <img src="https://templatemo.com/templates/templatemo_622_clearwave/images/tm-622-screen-05.jpg" alt="App screen 5" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy" />
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+    <div style="display:flex;align-items:center;justify-content:center;gap:24px;width:100%;margin-top:48px;">
+      <button class="carousel-btn" id="carouselPrev" aria-label="Previous screen">
+        <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/></svg>
+      </button>
+      <div class="carousel-dots" id="carouselDots"></div>
+      <button class="carousel-btn" id="carouselNext" aria-label="Next screen">
+        <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+      </button>
+    </div>
+  </section>
+
+  <!-- ── 4. FEATURES ── -->
+  <section class="features-section" id="features">
+    <div class="container">
+      <div class="features-header">
+        <div class="section-label reveal">Platform Features</div>
+        <h2 class="section-title reveal reveal-delay-1">Built for <em>clarity</em><br>at every scale</h2>
+        <p class="section-sub reveal reveal-delay-2">Every feature is designed to reduce friction and surface what matters. No bloat, no configuration maze.</p>
+      </div>
+
+      <!-- Feature 1 -->
+      <div class="feature-row">
+        <div class="feature-content reveal">
+          <div class="feature-number">01 — Unified Dashboard</div>
+          <h3 class="feature-title">Every metric, one calm surface</h3>
+          <p class="feature-desc">Pull data from any source into a single, composable view. Share live dashboards with stakeholders — no exports, no screenshots.</p>
+          <div class="feature-checklist">
+            <div class="feature-check"><div class="check-icon">✓</div><span>Drag-and-drop widget builder</span></div>
+            <div class="feature-check"><div class="check-icon">✓</div><span>Real-time data sync across all sources</span></div>
+            <div class="feature-check"><div class="check-icon">✓</div><span>Role-based sharing with granular permissions</span></div>
+          </div>
+        </div>
+        <div class="feature-visual reveal reveal-delay-1">
+          <div class="feature-visual-inner">
+            <div class="fv-row">
+              <div class="fv-card">
+                <div class="fv-card-label">Monthly Revenue</div>
+                <div class="fv-card-val">$84.2k</div>
+                <div class="fv-card-bar"><div class="fv-card-bar-fill" style="width:72%"></div></div>
+              </div>
+              <div class="fv-card">
+                <div class="fv-card-label">Active Users</div>
+                <div class="fv-card-val">12,481</div>
+                <div class="fv-card-bar"><div class="fv-card-bar-fill" style="width:88%"></div></div>
+              </div>
+            </div>
+            <div class="fv-card">
+              <div class="fv-card-label">Recent Activity</div>
+              <div class="fv-list" style="margin-top:8px">
+                <div class="fv-list-item"><span class="fv-list-name">Q3 Report synced</span><span class="fv-pill green">Done</span></div>
+                <div class="fv-list-item"><span class="fv-list-name">Team review pending</span><span class="fv-pill blue">Active</span></div>
+                <div class="fv-list-item"><span class="fv-list-name">Analytics export</span><span class="fv-pill dim">Queued</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Feature 2 -->
+      <div class="feature-row reverse">
+        <div class="feature-content reveal">
+          <div class="feature-number">02 — Smart Automation</div>
+          <h3 class="feature-title">Routines that run<br><em>themselves</em></h3>
+          <p class="feature-desc">Build automation flows with natural language. Clearwave understands your intent and suggests the next step — no flowchart diagrams needed.</p>
+          <div class="feature-checklist">
+            <div class="feature-check"><div class="check-icon">✓</div><span>Natural language automation builder</span></div>
+            <div class="feature-check"><div class="check-icon">✓</div><span>500+ pre-built trigger templates</span></div>
+            <div class="feature-check"><div class="check-icon">✓</div><span>Full audit trail for every action</span></div>
+          </div>
+        </div>
+        <div class="feature-visual reveal reveal-delay-1">
+          <div class="feature-visual-inner">
+            <div class="fv-card">
+              <div class="fv-card-label">Active Automations</div>
+              <div class="fv-list" style="margin-top:8px">
+                <div class="fv-list-item"><span class="fv-list-name">Weekly digest → Slack</span><span class="fv-pill green">Running</span></div>
+                <div class="fv-list-item"><span class="fv-list-name">Lead scored → Notify sales</span><span class="fv-pill green">Running</span></div>
+                <div class="fv-list-item"><span class="fv-list-name">Invoice due → Alert CFO</span><span class="fv-pill blue">Active</span></div>
+                <div class="fv-list-item"><span class="fv-list-name">Report sync → Drive</span><span class="fv-pill dim">Paused</span></div>
+              </div>
+            </div>
+            <div class="fv-row">
+              <div class="fv-card fv-wide">
+                <div class="fv-card-label">Hours Saved This Month</div>
+                <div class="fv-card-val">148h</div>
+                <div class="fv-card-bar"><div class="fv-card-bar-fill" style="width:91%"></div></div>
+              </div>
+              <div class="fv-card">
+                <div class="fv-card-label">Flows</div>
+                <div class="fv-card-val">24</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Feature 3 -->
+      <div class="feature-row">
+        <div class="feature-content reveal">
+          <div class="feature-number">03 — Team Collaboration</div>
+          <h3 class="feature-title">Comments, context,<br>and <em>clarity</em></h3>
+          <p class="feature-desc">Annotate anything, assign tasks inline, and resolve conversations without switching tabs. The work and the discussion stay together.</p>
+          <div class="feature-checklist">
+            <div class="feature-check"><div class="check-icon">✓</div><span>Inline comments on any data point</span></div>
+            <div class="feature-check"><div class="check-icon">✓</div><span>Threaded task assignments</span></div>
+            <div class="feature-check"><div class="check-icon">✓</div><span>Real-time presence and live cursors</span></div>
+          </div>
+        </div>
+        <div class="feature-visual reveal reveal-delay-1">
+          <div class="feature-visual-inner">
+            <div class="fv-row">
+              <div class="fv-card fv-wide">
+                <div class="fv-card-label">Online Now</div>
+                <div style="display:flex;gap:-4px;margin-top:6px">
+                  <div style="width:28px;height:28px;border-radius:50%;background:var(--accent);border:2px solid var(--surface);display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:#fff">A</div>
+                  <div style="width:28px;height:28px;border-radius:50%;background:var(--accent-mid);border:2px solid var(--surface);display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:#fff;margin-left:-6px">K</div>
+                  <div style="width:28px;height:28px;border-radius:50%;background:#5A6B66;border:2px solid var(--surface);display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:#fff;margin-left:-6px">M</div>
+                  <div style="width:28px;height:28px;border-radius:50%;background:var(--bg-alt);border:2px solid var(--surface);display:flex;align-items:center;justify-content:center;font-size:9px;color:var(--text-2);margin-left:-6px">+5</div>
+                </div>
+              </div>
+              <div class="fv-card">
+                <div class="fv-card-label">Open Tasks</div>
+                <div class="fv-card-val">37</div>
+              </div>
+            </div>
+            <div class="fv-card">
+              <div class="fv-card-label">Recent Comments</div>
+              <div class="fv-list" style="margin-top:8px">
+                <div class="fv-list-item"><span class="fv-list-name">Alex → Q3 chart updated</span><span class="fv-pill green">Resolved</span></div>
+                <div class="fv-list-item"><span class="fv-list-name">Kim → Review needed</span><span class="fv-pill blue">Open</span></div>
+                <div class="fv-list-item"><span class="fv-list-name">Maya → Approved & shipped</span><span class="fv-pill green">Done</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── 6. STATS ── -->
+  <section class="stats-section">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-card reveal">
+          <div class="stat-rule"></div>
+          <div class="stat-value"><span class="stat-num" data-target="50">0</span><span class="stat-suffix">k+</span></div>
+          <div class="stat-label">Teams Worldwide</div>
+          <div class="stat-sublabel">Across 80+ countries</div>
+        </div>
+        <div class="stat-card reveal reveal-delay-1">
+          <div class="stat-rule"></div>
+          <div class="stat-value"><span class="stat-num" data-target="34">0</span><span class="stat-suffix">%</span></div>
+          <div class="stat-label">Avg. Productivity Gain</div>
+          <div class="stat-sublabel">Measured in first 30 days</div>
+        </div>
+        <div class="stat-card reveal reveal-delay-2">
+          <div class="stat-rule"></div>
+          <div class="stat-value"><span class="stat-num" data-target="99" data-decimal="9">0</span><span class="stat-suffix">%</span></div>
+          <div class="stat-label">Uptime SLA</div>
+          <div class="stat-sublabel">Guaranteed and monitored</div>
+        </div>
+        <div class="stat-card reveal reveal-delay-3">
+          <div class="stat-rule"></div>
+          <div class="stat-value"><span class="stat-num" data-target="18">0</span><span class="stat-suffix">h</span></div>
+          <div class="stat-label">Saved Per Team Weekly</div>
+          <div class="stat-sublabel">On average across all plans</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── 7. PRICING ── -->
+  <section class="pricing-section" id="pricing">
+    <div class="container">
+      <div class="pricing-header">
+        <div class="section-label reveal">Pricing</div>
+        <h2 class="section-title reveal reveal-delay-1">Simple, <em>transparent</em> pricing</h2>
+        <p class="section-sub reveal reveal-delay-2">No hidden fees. No surprise overages. Cancel anytime.</p>
+      </div>
+      <div class="pricing-toggle reveal">
+        <span class="toggle-label active" id="monthlyLabel">Monthly</span>
+        <div class="toggle-switch" id="pricingToggle" role="switch" aria-checked="false" tabindex="0" aria-label="Toggle annual billing"></div>
+        <span class="toggle-label" id="annualLabel">Annual</span>
+        <div class="toggle-badge">Save 35%</div>
+      </div>
+      <div class="pricing-grid">
+        <div class="pricing-card reveal">
+          <div class="pricing-tier">Starter</div>
+          <div class="pricing-price">
+            <span class="price-currency">$</span>
+            <span class="price-amount" id="price-starter">20</span>
+            <span class="price-period">&nbsp;/ mo</span>
+          </div>
+          <div class="price-annual-note" id="annual-note-starter">&nbsp;</div>
+          <p class="pricing-desc">For individuals and small teams getting started with structured workflows.</p>
+          <div class="pricing-divider"></div>
+          <div class="pricing-features">
+            <div class="pricing-feature"><div class="pricing-check">✓</div><span>Up to 5 team members</span></div>
+            <div class="pricing-feature"><div class="pricing-check">✓</div><span>10 active dashboards</span></div>
+            <div class="pricing-feature"><div class="pricing-check">✓</div><span>Basic automations (50/mo)</span></div>
+            <div class="pricing-feature"><div class="pricing-check">✓</div><span>7-day data history</span></div>
+            <div class="pricing-feature"><div class="pricing-check">✓</div><span>Email support</span></div>
+          </div>
+          <a href="#" class="pricing-cta">Start Free Trial</a>
+        </div>
+        <div class="pricing-card featured reveal reveal-delay-1">
+          <div class="pricing-badge">Most Popular</div>
+          <div class="pricing-tier">Professional</div>
+          <div class="pricing-price">
+            <span class="price-currency">$</span>
+            <span class="price-amount" id="price-pro">60</span>
+            <span class="price-period">&nbsp;/ mo</span>
+          </div>
+          <div class="price-annual-note" id="annual-note-pro">&nbsp;</div>
+          <p class="pricing-desc">For growing teams that need powerful automation and advanced reporting.</p>
+          <div class="pricing-divider"></div>
+          <div class="pricing-features">
+            <div class="pricing-feature"><div class="pricing-check">✓</div><span>Up to 25 team members</span></div>
+            <div class="pricing-feature"><div class="pricing-check">✓</div><span>Unlimited dashboards</span></div>
+            <div class="pricing-feature"><div class="pricing-check">✓</div><span>Advanced automations (unlimited)</span></div>
+            <div class="pricing-feature"><div class="pricing-check">✓</div><span>90-day data history</span></div>
+            <div class="pricing-feature"><div class="pricing-check">✓</div><span>Priority chat support</span></div>
+            <div class="pricing-feature"><div class="pricing-check">✓</div><span>Mobile app access</span></div>
+          </div>
+          <a href="#" class="pricing-cta">Start Free Trial</a>
+        </div>
+        <div class="pricing-card reveal reveal-delay-2">
+          <div class="pricing-tier">Enterprise</div>
+          <div class="pricing-price">
+            <span class="price-currency">$</span>
+            <span class="price-amount" id="price-ent">150</span>
+            <span class="price-period">&nbsp;/ mo</span>
+          </div>
+          <div class="price-annual-note" id="annual-note-ent">&nbsp;</div>
+          <p class="pricing-desc">For large organizations with custom requirements and compliance needs.</p>
+          <div class="pricing-divider"></div>
+          <div class="pricing-features">
+            <div class="pricing-feature"><div class="pricing-check">✓</div><span>Unlimited members</span></div>
+            <div class="pricing-feature"><div class="pricing-check">✓</div><span>Custom integrations & API</span></div>
+            <div class="pricing-feature"><div class="pricing-check">✓</div><span>SSO & advanced permissions</span></div>
+            <div class="pricing-feature"><div class="pricing-check">✓</div><span>Unlimited data history</span></div>
+            <div class="pricing-feature"><div class="pricing-check">✓</div><span>Dedicated success manager</span></div>
+            <div class="pricing-feature"><div class="pricing-check">✓</div><span>SOC 2 & compliance reports</span></div>
+          </div>
+          <a href="#" class="pricing-cta">Contact Sales</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── 8. TESTIMONIALS ── -->
+  <section class="testimonials-section" id="testimonials">
+    <div class="container">
+      <div class="testimonials-header">
+        <div class="section-label reveal">Customer Stories</div>
+        <h2 class="section-title reveal reveal-delay-1">Teams that <em>love</em> Clearwave</h2>
+        <p class="section-sub reveal reveal-delay-2">Don't take our word for it — here's what real teams say after 90 days.</p>
+      </div>
+      <div class="testimonials-grid">
+        <div class="testimonial-card tall reveal">
+          <div class="testimonial-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+          <p class="testimonial-quote">"We replaced three separate tools with Clearwave and actually have fewer meetings now. The automation flows handle the handoffs our team used to spend mornings sorting out. It's the calmest our workflow has ever felt."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">SL</div>
+            <div>
+              <div class="author-name">Sarah Lindqvist</div>
+              <div class="author-role">Head of Operations · Stratum IO</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card reveal reveal-delay-1">
+          <div class="testimonial-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+          <p class="testimonial-quote">"The mobile app alone justified the switch. I can review dashboards and approve tasks between meetings without opening my laptop."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">MR</div>
+            <div>
+              <div class="author-name">Marcus Reyes</div>
+              <div class="author-role">Product Director · Meridian</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card reveal reveal-delay-2">
+          <div class="testimonial-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+          <p class="testimonial-quote">"Onboarding our 30-person team took one afternoon. The learning curve is genuinely flat."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">PK</div>
+            <div>
+              <div class="author-name">Priya Kapoor</div>
+              <div class="author-role">Engineering Lead · Vanta Labs</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card reveal reveal-delay-1">
+          <div class="testimonial-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+          <p class="testimonial-quote">"The reporting features are leagues ahead of what we had. We can finally show stakeholders live data instead of preparing decks."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">TW</div>
+            <div>
+              <div class="author-name">Tom Wainwright</div>
+              <div class="author-role">CFO · Pulsar HQ</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card reveal reveal-delay-2">
+          <div class="testimonial-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+          <p class="testimonial-quote">"Customer support actually reads your message. Had a custom integration question answered in under two hours."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">AN</div>
+            <div>
+              <div class="author-name">Aiko Nakamura</div>
+              <div class="author-role">CTO · Nexaflow</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── 9. INTEGRATIONS ── -->
+  <section class="integrations-section" id="integrations">
+    <div class="container">
+      <div class="integrations-header">
+        <div class="section-label reveal">Integrations</div>
+        <h2 class="section-title reveal reveal-delay-1">Connects with your<br><em>existing stack</em></h2>
+        <p class="section-sub reveal reveal-delay-2">One-click integrations with the tools your team already uses. No dev work required.</p>
+      </div>
+      <div class="integrations-grid">
+        <div class="integration-tile reveal"><div class="integration-name">Slack</div></div>
+        <div class="integration-tile reveal reveal-delay-1"><div class="integration-name">Google Sheets</div></div>
+        <div class="integration-tile reveal reveal-delay-2"><div class="integration-name">Google Drive</div></div>
+        <div class="integration-tile reveal reveal-delay-3"><div class="integration-name">Zapier</div></div>
+        <div class="integration-tile reveal"><div class="integration-name">Stripe</div></div>
+        <div class="integration-tile reveal reveal-delay-1"><div class="integration-name">GitHub</div></div>
+        <div class="integration-tile reveal reveal-delay-2"><div class="integration-name">Notion</div></div>
+        <div class="integration-tile reveal reveal-delay-3"><div class="integration-name">Mailchimp</div></div>
+        <div class="integration-tile reveal"><div class="integration-name">HubSpot</div></div>
+        <div class="integration-tile reveal reveal-delay-1"><div class="integration-name">Airtable</div></div>
+        <div class="integration-tile reveal reveal-delay-2"><div class="integration-name">Intercom</div></div>
+        <div class="integration-tile reveal reveal-delay-3"><div class="integration-name">Salesforce</div></div>
+        <div class="integration-tile reveal"><div class="integration-name">Figma</div></div>
+        <div class="integration-tile reveal reveal-delay-1"><div class="integration-name">Linear</div></div>
+        <div class="integration-tile reveal reveal-delay-2"><div class="integration-name">Jira</div></div>
+        <div class="integration-tile reveal reveal-delay-3"><div class="integration-name">Webflow</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── 10. FAQ ── -->
+  <section class="faq-section" id="faq">
+    <div class="container">
+      <div class="faq-inner">
+        <div class="faq-sidebar reveal">
+          <div class="section-label">FAQ</div>
+          <h2 class="section-title">Questions,<br><em>answered</em></h2>
+          <p class="section-sub">Can't find what you're looking for? Reach our team at <a href="#" class="__cf_email__" data-cfemail="056d6069696a456669606477726473602b6c6a">[email&#160;protected]</a> — we reply within 2 hours.</p>
+          <button class="faq-toggle-all" id="faqToggleAll">
+            <span id="faqToggleIcon">+</span> Expand all</button>
+        </div>
+        <div class="faq-list reveal reveal-delay-1" id="faqList">
+          <div class="faq-item">
+            <div class="faq-question" tabindex="0" role="button" aria-expanded="false">
+              Is there a free trial?
+              <div class="faq-icon">+</div>
+            </div>
+            <div class="faq-answer"><div class="faq-answer-inner">Yes — every plan starts with a 14-day free trial, no credit card required. You get full access to all features in your chosen tier so you can make a real evaluation before committing.</div></div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question" tabindex="0" role="button" aria-expanded="false">
+              How does pricing work for larger teams?
+              <div class="faq-icon">+</div>
+            </div>
+            <div class="faq-answer"><div class="faq-answer-inner">Starter and Professional plans are per-workspace, not per-seat — so you won't see surprise bills as your team grows. Enterprise plans are custom-quoted based on your specific needs and contract length.</div></div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question" tabindex="0" role="button" aria-expanded="false">
+              Can I migrate data from another tool?
+              <div class="faq-icon">+</div>
+            </div>
+            <div class="faq-answer"><div class="faq-answer-inner">We support CSV imports and direct migration from Notion, Airtable, Asana, and Trello. Enterprise customers get a dedicated migration specialist who handles the entire process for you.</div></div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question" tabindex="0" role="button" aria-expanded="false">
+              What does the 99.9% uptime SLA mean?
+              <div class="faq-icon">+</div>
+            </div>
+            <div class="faq-answer"><div class="faq-answer-inner">It means Clearwave is contractually committed to less than 8.7 hours of downtime per year. We monitor availability 24/7, post all incidents publicly at status.clearwave.io, and issue credits automatically if SLA is breached.</div></div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question" tabindex="0" role="button" aria-expanded="false">
+              Is my data secure?
+              <div class="faq-icon">+</div>
+            </div>
+            <div class="faq-answer"><div class="faq-answer-inner">Clearwave is SOC 2 Type II certified, GDPR compliant, and ISO 27001 aligned. All data is encrypted in transit and at rest. You can request a full security report from our compliance team at any time.</div></div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question" tabindex="0" role="button" aria-expanded="false">
+              Can I cancel anytime?
+              <div class="faq-icon">+</div>
+            </div>
+            <div class="faq-answer"><div class="faq-answer-inner">Yes. There are no lock-in contracts on monthly plans. Cancel from your account settings at any time and you won't be charged again. Annual plans are non-refundable but can be cancelled to stop renewal.</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── 11. CTA BANNER ── -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-inner reveal">
+        <div class="cta-content">
+          <div class="cta-label">✦ Get Started Today</div>
+          <h2 class="cta-title">Ready for a<br><em>clearer workflow?</em></h2>
+          <p class="cta-sub">Join 50,000+ teams who replaced chaos with clarity. Set up in under 10 minutes.</p>
+        </div>
+        <div class="cta-actions">
+          <a href="#" class="btn-cta-primary">
+            Start Free Trial
+            <span>→</span>
+          </a>
+          <a href="#" class="btn-cta-ghost">Schedule a demo</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── 12. FOOTER ── -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#" class="nav-logo">clear<span style="color:var(--accent-light)">wave</span></a>
+          <p class="footer-brand-desc">The calm, powerful workspace for teams that want to focus on work — not on managing it.</p>
+          <div class="footer-socials">
+            <a href="#" class="social-btn" aria-label="Twitter / X">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="#" class="social-btn" aria-label="LinkedIn">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+            <a href="#" class="social-btn" aria-label="YouTube">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            </a>
+            <a href="#" class="social-btn" aria-label="TikTok">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
+            </a>
+          </div>
+        </div>
+        <div>
+          <div class="footer-col-label">Product</div>
+          <div class="footer-links">
+            <a href="#features">Features</a>
+            <a href="#screens">Mobile App</a>
+            <a href="#pricing">Pricing</a>
+            <a href="#integrations">Integrations</a>
+            <a href="#">Changelog</a>
+          </div>
+        </div>
+        <div>
+          <div class="footer-col-label">Company</div>
+          <div class="footer-links">
+            <a href="#">About</a>
+            <a href="#">Blog</a>
+            <a href="#">Careers</a>
+            <a href="#">Press Kit</a>
+            <a href="#">Status</a>
+          </div>
+        </div>
+        <div>
+          <div class="footer-col-label">Support</div>
+          <div class="footer-links">
+            <a href="#">Help Center</a>
+            <a href="#">Documentation</a>
+            <a href="#">Security</a>
+            <a href="#">Contact</a>
+            <a href="#">Community</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-copy">
+          © 2026 Clearwave. Design by <a rel="nofollow" href="https://templatemo.com" target="_blank">TemplateMo</a>
+        </div>
+        <div class="footer-legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Cookie Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  {{-- <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script> --}}
+  <script src="https://templatemo.com/templates/templatemo_622_clearwave/templatemo-622-clearwave.js"></script>
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v4bc70e2c01a94c73b74392e4234840661791215815920" integrity="sha512-L0ha0OXavK/8okipN9F8BtP84dg9DUhPERbBXzwI6dgTA55d2+yweo3pn5CSFYs45/r8md2+xvUPtTdvTNRfjA==" data-cf-beacon='{"version":"2024.11.0","token":"c4ca6eb172664bf883440371cc8d12bf","r":1,"spa":2}' crossorigin="anonymous"></script>
+</body>
 </html>
