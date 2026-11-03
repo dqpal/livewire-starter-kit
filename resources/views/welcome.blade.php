@@ -25,7 +25,7 @@
     <a href="#testimonials">Reviews</a>
     <a href="#integrations">Integrations</a>
     <a href="#faq">FAQ</a>
-    <a href="#" class="mobile-cta btn-primary">Start Free Trial</a>
+    <a href="#" class="mobile-cta btn-primary">Learn more</a>
   </div>
 
   <!-- ── 1. NAV ── -->
@@ -40,8 +40,8 @@
         <li><a href="#faq">FAQ</a></li>
       </ul>
       <div class="nav-cta">
-        <a href="#" class="btn-ghost">Sign in</a>
-        <a href="#" class="btn-primary">Start Free Trial</a>
+        {{-- <a href="#" class="btn-ghost">Sign in</a> --}}
+        <a href="#" class="btn-primary">Learn more</a>
       </div>
       <button class="nav-hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
         <span></span><span></span><span></span>
@@ -56,7 +56,7 @@
         <div class="hero-content">
           <div class="hero-badge reveal">
             <div class="hero-badge-dot">✦</div>
-            <span>Rated <strong>#1 Productivity SaaS</strong> of 2024</span>
+            <span>Rated <strong>#1 Productivity</strong> of 2027</span>
           </div>
           <h1 class="hero-title reveal reveal-delay-1">
             Your workflow,<br><em>finally clear.</em>
@@ -66,7 +66,7 @@
           </p>
           <div class="hero-actions reveal reveal-delay-3">
             <a href="#" class="btn-primary-lg">
-              Start Free — No Card
+              Start Free
               <span class="btn-arrow">→</span>
             </a>
             <a href="#screens" class="btn-outline-lg">
@@ -460,7 +460,7 @@
             <div class="pricing-feature"><div class="pricing-check">✓</div><span>7-day data history</span></div>
             <div class="pricing-feature"><div class="pricing-check">✓</div><span>Email support</span></div>
           </div>
-          <a href="#" class="pricing-cta">Start Free Trial</a>
+          <a href="#" class="pricing-cta">Learn more</a>
         </div>
         <div class="pricing-card featured reveal reveal-delay-1">
           <div class="pricing-badge">Most Popular</div>
@@ -481,7 +481,7 @@
             <div class="pricing-feature"><div class="pricing-check">✓</div><span>Priority chat support</span></div>
             <div class="pricing-feature"><div class="pricing-check">✓</div><span>Mobile app access</span></div>
           </div>
-          <a href="#" class="pricing-cta">Start Free Trial</a>
+          <a href="#" class="pricing-cta">Learn more</a>
         </div>
         <div class="pricing-card reveal reveal-delay-2">
           <div class="pricing-tier">Enterprise</div>
@@ -674,7 +674,7 @@
         </div>
         <div class="cta-actions">
           <a href="#" class="btn-cta-primary">
-            Start Free Trial
+            Learn more
             <span>→</span>
           </a>
           <a href="#" class="btn-cta-ghost">Schedule a demo</a>
