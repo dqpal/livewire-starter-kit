@@ -1,756 +1,97 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>TemplateMo 622 Clearwave</title>
-  <!--
-  TemplateMo 622 Clearwave
-  https://templatemo.com/tm-622-clearwave
-  Free for personal and commercial use
-  -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,300&family=Playfair+Display:ital,wght@0,700;1,600&display=swap" rel="stylesheet" />
+<!DOCTYPE html><html lang="en" data-bs-theme="auto"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Bootstrap · The most popular HTML, CSS, and JS library in the world.</title><meta name="description" content="Powerful, extensible, and feature-packed frontend toolkit. Build and customize with Sass, utilize prebuilt grid system and components, and bring projects to life with powerful JavaScript plugins."><meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors"><meta name="generator" content="Astro v7.3.2"><link rel="canonical" href="https://getbootstrap.com/"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&family=Geist:wght@100..900&display=swap" rel="stylesheet"><script>
+  ;(() => {
+    'use strict'
 
-  <link rel="stylesheet" href="https://templatemo.com/templates/templatemo_622_clearwave/templatemo-622-clearwave.css" />
-</head>
-<body>
+    const getStoredTheme = () => localStorage.getItem('theme')
+    const setStoredTheme = (theme) => localStorage.setItem('theme', theme)
 
-  <!-- ── MOBILE MENU ── -->
-  <div class="mobile-menu" id="mobileMenu" role="dialog" aria-modal="true" aria-label="Navigation">
-    <a href="#screens">App</a>
-    <a href="#features">Features</a>
-    <a href="#pricing">Pricing</a>
-    <a href="#testimonials">Reviews</a>
-    <a href="#integrations">Integrations</a>
-    <a href="#faq">FAQ</a>
-    <a href="#" class="mobile-cta btn-primary">Learn more</a>
-  </div>
+    const getPreferredTheme = () => {
+      const storedTheme = getStoredTheme()
+      if (storedTheme) return storedTheme
+      return 'auto'
+    }
 
-  <!-- ── 1. NAV ── -->
-  <nav class="nav" id="mainNav" role="navigation" aria-label="Main navigation">
-    <div class="nav-inner">
-      <a href="#" class="nav-logo">clear<span>wave</span></a>
-      <ul class="nav-links" role="list">
-        <li><a href="#screens">App</a></li>
-        <li><a href="#features">Features</a></li>
-        <li><a href="#pricing">Pricing</a></li>
-        <li><a href="#testimonials">Reviews</a></li>
-        <li><a href="#faq">FAQ</a></li>
-      </ul>
-      <div class="nav-cta">
-        {{-- <a href="#" class="btn-ghost">Sign in</a> --}}
-        <a href="#" class="btn-primary">Learn more</a>
-      </div>
-      <button class="nav-hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-  </nav>
+    const resolveTheme = (theme) => {
+      if (theme === 'auto') {
+        return window.matchMedia('(prefers-color-scheme: dark)').matches
+          ? 'dark'
+          : 'light'
+      }
+      return theme
+    }
 
-  <!-- ── 2. HERO ── -->
-  <section class="hero">
-    <div class="container">
-      <div class="hero-inner">
-        <div class="hero-content">
-          <div class="hero-badge reveal">
-            <div class="hero-badge-dot">✦</div>
-            <span>Rated <strong>#1 Productivity</strong> of 2027</span>
-          </div>
-          <h1 class="hero-title reveal reveal-delay-1">
-            Your workflow,<br><em>finally clear.</em>
-          </h1>
-          <p class="hero-sub reveal reveal-delay-2">
-            Clearwave unifies your team's projects, data, and communication into one calm, focused surface. Less noise, more done.
-          </p>
-          <div class="hero-actions reveal reveal-delay-3">
-            <a href="#" class="btn-primary-lg">
-              Start Free
-              <span class="btn-arrow">→</span>
-            </a>
-            <a href="#screens" class="btn-outline-lg">
-              <span>▶</span> See it in action
-            </a>
-          </div>
-          <div class="hero-trust reveal reveal-delay-4">
-            <div class="trust-item">
-              <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
-              SOC 2 Certified
-            </div>
-            <div class="trust-divider"></div>
-            <div class="trust-item">
-              <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
-              99.9% Uptime SLA
-            </div>
-            <div class="trust-divider"></div>
-            <div class="trust-item">
-              <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
-              50k+ Teams
-            </div>
-          </div>
-        </div>
-        <div class="hero-visual reveal reveal-delay-2">
-          <div class="hero-dashboard">
-            <div class="dashboard-bar">
-              <div class="db-dot"></div><div class="db-dot"></div><div class="db-dot"></div>
-            </div>
-            <div class="dashboard-body">
-              <div class="db-header">
-                <div class="db-title">Team Performance</div>
-                <div class="db-tag">Live</div>
-              </div>
-              <div class="db-chart">
-                <div class="db-bar" style="height:35%"></div>
-                <div class="db-bar" style="height:55%"></div>
-                <div class="db-bar" style="height:42%"></div>
-                <div class="db-bar active" style="height:75%"></div>
-                <div class="db-bar" style="height:60%"></div>
-                <div class="db-bar active" style="height:88%"></div>
-                <div class="db-bar" style="height:70%"></div>
-                <div class="db-bar active" style="height:92%"></div>
-              </div>
-              <div class="db-stats">
-                <div class="db-stat">
-                  <div class="db-stat-val">94<span style="font-size:.9rem;color:var(--accent)">%</span></div>
-                  <div class="db-stat-label">Task Rate</div>
-                  <div class="db-stat-change">+12%</div>
-                </div>
-                <div class="db-stat">
-                  <div class="db-stat-val">2.4<span style="font-size:.9rem;color:var(--accent)">k</span></div>
-                  <div class="db-stat-label">Active Users</div>
-                  <div class="db-stat-change">+8%</div>
-                </div>
-                <div class="db-stat">
-                  <div class="db-stat-val">18<span style="font-size:.9rem;color:var(--accent)">h</span></div>
-                  <div class="db-stat-label">Saved / week</div>
-                  <div class="db-stat-change">+24%</div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="hero-float-badge">
-            <div class="float-badge-icon">✦</div>
-            <div class="float-badge-text">
-              <strong>New integration</strong>
-              <span>Slack connected · just now</span>
-            </div>
-          </div>
-          <div class="hero-float-badge-2">
-            <div class="float-badge-2-val">↑ 34%</div>
-            <div class="float-badge-2-label">Output this week</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+    const setTheme = (theme) => {
+      const resolved = resolveTheme(theme)
+      if (document.documentElement.getAttribute('data-bs-theme') !== resolved) {
+        document.documentElement.setAttribute('data-bs-theme', resolved)
+      }
+    }
 
-  <!-- ── 3. LOGO TICKER ── -->
-  <div class="ticker-section">
-    <div class="ticker-label">Trusted by forward-thinking teams at</div>
-    <div class="ticker-track-wrap">
-      <div class="ticker-track">
-        <!-- Set 1 -->
-        <div class="ticker-item"><div class="ticker-item-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="var(--accent)"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg></div>Nexaflow</div>
-        <div class="ticker-dot"></div>
-        <div class="ticker-item"><div class="ticker-item-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="var(--accent)"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg></div>Meridian</div>
-        <div class="ticker-dot"></div>
-        <div class="ticker-item"><div class="ticker-item-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="var(--accent)"><polygon points="12,2 22,20 2,20"/></svg></div>Vanta Labs</div>
-        <div class="ticker-dot"></div>
-        <div class="ticker-item"><div class="ticker-item-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="var(--accent)"><path d="M4 4h16v12H4z M8 20h8"/></svg></div>Pulsar HQ</div>
-        <div class="ticker-dot"></div>
-        <div class="ticker-item"><div class="ticker-item-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="var(--accent)"><circle cx="12" cy="7" r="4"/><path d="M4 21c0-4 3.6-7 8-7s8 3 8 7"/></svg></div>Arclight</div>
-        <div class="ticker-dot"></div>
-        <div class="ticker-item"><div class="ticker-item-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="var(--accent)"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/></svg></div>Korova Co.</div>
-        <div class="ticker-dot"></div>
-        <div class="ticker-item"><div class="ticker-item-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="var(--accent)"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div>Stratum IO</div>
-        <div class="ticker-dot"></div>
-        <div class="ticker-item"><div class="ticker-item-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="var(--accent)"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>Lumiq</div>
-        <div class="ticker-dot"></div>
-        <!-- Set 2 (duplicate for seamless loop) -->
-        <div class="ticker-item"><div class="ticker-item-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="var(--accent)"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg></div>Nexaflow</div>
-        <div class="ticker-dot"></div>
-        <div class="ticker-item"><div class="ticker-item-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="var(--accent)"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg></div>Meridian</div>
-        <div class="ticker-dot"></div>
-        <div class="ticker-item"><div class="ticker-item-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="var(--accent)"><polygon points="12,2 22,20 2,20"/></svg></div>Vanta Labs</div>
-        <div class="ticker-dot"></div>
-        <div class="ticker-item"><div class="ticker-item-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="var(--accent)"><path d="M4 4h16v12H4z M8 20h8"/></svg></div>Pulsar HQ</div>
-        <div class="ticker-dot"></div>
-        <div class="ticker-item"><div class="ticker-item-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="var(--accent)"><circle cx="12" cy="7" r="4"/><path d="M4 21c0-4 3.6-7 8-7s8 3 8 7"/></svg></div>Arclight</div>
-        <div class="ticker-dot"></div>
-        <div class="ticker-item"><div class="ticker-item-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="var(--accent)"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/></svg></div>Korova Co.</div>
-        <div class="ticker-dot"></div>
-        <div class="ticker-item"><div class="ticker-item-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="var(--accent)"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div>Stratum IO</div>
-        <div class="ticker-dot"></div>
-        <div class="ticker-item"><div class="ticker-item-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="var(--accent)"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>Lumiq</div>
-        <div class="ticker-dot"></div>
-      </div>
-    </div>
-  </div>
+    setTheme(getPreferredTheme())
 
-  <!-- ── 5. 3D PHONE CAROUSEL ── -->
-  <section class="carousel-section" id="screens">
-    <div class="container">
-      <div class="carousel-header">
-        <div class="section-label reveal">Mobile App</div>
-        <h2 class="section-title reveal reveal-delay-1">Your workspace,<br><em>in your pocket</em></h2>
-        <p class="section-sub reveal reveal-delay-2">The Clearwave mobile app brings every dashboard, task, and notification to you — beautifully adapted for any screen.</p>
-      </div>
-    </div>
-    <div class="carousel-zoom">
-      <button class="zoom-btn" id="zoomOut" aria-label="Zoom out">−</button>
-      <div class="zoom-pips" id="zoomPips"></div>
-      <button class="zoom-btn" id="zoomIn" aria-label="Zoom in">+</button>
-    </div>
+    const showActiveTheme = (theme, focus = false) => {
+      const themeSwitcher = document.querySelector('#bd-theme')
+      if (!themeSwitcher) return
 
-    <div class="carousel-stage" id="carouselStage">
-      <div class="carousel-track" id="carouselTrack">
+      const activeThemeIcon = document.querySelector('.theme-icon-active use')
+      const btnToActive = document.querySelector(
+        `[data-bs-theme-value="${theme}"]`
+      )
+      const svgOfActiveBtn = btnToActive
+        .querySelector('svg use')
+        .getAttribute('href')
 
-        <!-- Phone screens: 5 different screen designs + extras for looping -->
-        <!-- We will render 7 cards and cycle positions -->
+      document.querySelectorAll('[data-bs-theme-value]').forEach((element) => {
+        element.classList.remove('active')
+        element.setAttribute('aria-pressed', 'false')
+      })
 
-        <div class="phone-card" data-pos="left2" data-index="0">
-          <div class="phone-shell">
-            <div class="phone-screen">
-              <img src="https://templatemo.com/templates/templatemo_622_clearwave/images/tm-622-screen-01.jpg" alt="App screen 1" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy" />
-            </div>
-          </div>
+      btnToActive.classList.add('active')
+      btnToActive.setAttribute('aria-pressed', 'true')
+      activeThemeIcon.setAttribute('href', svgOfActiveBtn)
+      themeSwitcher.setAttribute(
+        'aria-label',
+        `Toggle theme (${btnToActive.dataset.bsThemeValue})`
+      )
 
-        </div>
+      if (focus) themeSwitcher.focus()
+    }
 
-        <div class="phone-card" data-pos="left1" data-index="1">
-          <div class="phone-shell">
-            <div class="phone-screen">
-              <img src="https://templatemo.com/templates/templatemo_622_clearwave/images/tm-622-screen-02.jpg" alt="App screen 2" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy" />
-            </div>
-          </div>
+    window
+      .matchMedia('(prefers-color-scheme: dark)')
+      .addEventListener('change', () => {
+        const storedTheme = getStoredTheme()
+        if (storedTheme !== 'light' && storedTheme !== 'dark') {
+          setTheme(getPreferredTheme())
+        }
+      })
 
-        </div>
+    window.addEventListener('DOMContentLoaded', () => {
+      showActiveTheme(getPreferredTheme())
 
-        <div class="phone-card" data-pos="center" data-index="2">
-          <div class="phone-shell">
-            <div class="phone-screen">
-              <img src="https://templatemo.com/templates/templatemo_622_clearwave/images/tm-622-screen-03.jpg" alt="App screen 3" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy" />
-            </div>
-          </div>
+      document.querySelectorAll('[data-bs-theme-value]').forEach((toggle) => {
+        toggle.addEventListener('click', () => {
+          const theme = toggle.getAttribute('data-bs-theme-value')
+          setStoredTheme(theme)
 
-        </div>
-
-        <div class="phone-card" data-pos="right1" data-index="3">
-          <div class="phone-shell">
-            <div class="phone-screen">
-              <img src="https://templatemo.com/templates/templatemo_622_clearwave/images/tm-622-screen-04.jpg" alt="App screen 4" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy" />
-            </div>
-          </div>
-
-        </div>
-
-        <div class="phone-card" data-pos="right2" data-index="4">
-          <div class="phone-shell">
-            <div class="phone-screen">
-              <img src="https://templatemo.com/templates/templatemo_622_clearwave/images/tm-622-screen-05.jpg" alt="App screen 5" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy" />
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </div>
-
-    <div style="display:flex;align-items:center;justify-content:center;gap:24px;width:100%;margin-top:48px;">
-      <button class="carousel-btn" id="carouselPrev" aria-label="Previous screen">
-        <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/></svg>
-      </button>
-      <div class="carousel-dots" id="carouselDots"></div>
-      <button class="carousel-btn" id="carouselNext" aria-label="Next screen">
-        <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
-      </button>
-    </div>
-  </section>
-
-  <!-- ── 4. FEATURES ── -->
-  <section class="features-section" id="features">
-    <div class="container">
-      <div class="features-header">
-        <div class="section-label reveal">Platform Features</div>
-        <h2 class="section-title reveal reveal-delay-1">Built for <em>clarity</em><br>at every scale</h2>
-        <p class="section-sub reveal reveal-delay-2">Every feature is designed to reduce friction and surface what matters. No bloat, no configuration maze.</p>
-      </div>
-
-      <!-- Feature 1 -->
-      <div class="feature-row">
-        <div class="feature-content reveal">
-          <div class="feature-number">01 — Unified Dashboard</div>
-          <h3 class="feature-title">Every metric, one calm surface</h3>
-          <p class="feature-desc">Pull data from any source into a single, composable view. Share live dashboards with stakeholders — no exports, no screenshots.</p>
-          <div class="feature-checklist">
-            <div class="feature-check"><div class="check-icon">✓</div><span>Drag-and-drop widget builder</span></div>
-            <div class="feature-check"><div class="check-icon">✓</div><span>Real-time data sync across all sources</span></div>
-            <div class="feature-check"><div class="check-icon">✓</div><span>Role-based sharing with granular permissions</span></div>
-          </div>
-        </div>
-        <div class="feature-visual reveal reveal-delay-1">
-          <div class="feature-visual-inner">
-            <div class="fv-row">
-              <div class="fv-card">
-                <div class="fv-card-label">Monthly Revenue</div>
-                <div class="fv-card-val">$84.2k</div>
-                <div class="fv-card-bar"><div class="fv-card-bar-fill" style="width:72%"></div></div>
-              </div>
-              <div class="fv-card">
-                <div class="fv-card-label">Active Users</div>
-                <div class="fv-card-val">12,481</div>
-                <div class="fv-card-bar"><div class="fv-card-bar-fill" style="width:88%"></div></div>
-              </div>
-            </div>
-            <div class="fv-card">
-              <div class="fv-card-label">Recent Activity</div>
-              <div class="fv-list" style="margin-top:8px">
-                <div class="fv-list-item"><span class="fv-list-name">Q3 Report synced</span><span class="fv-pill green">Done</span></div>
-                <div class="fv-list-item"><span class="fv-list-name">Team review pending</span><span class="fv-pill blue">Active</span></div>
-                <div class="fv-list-item"><span class="fv-list-name">Analytics export</span><span class="fv-pill dim">Queued</span></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Feature 2 -->
-      <div class="feature-row reverse">
-        <div class="feature-content reveal">
-          <div class="feature-number">02 — Smart Automation</div>
-          <h3 class="feature-title">Routines that run<br><em>themselves</em></h3>
-          <p class="feature-desc">Build automation flows with natural language. Clearwave understands your intent and suggests the next step — no flowchart diagrams needed.</p>
-          <div class="feature-checklist">
-            <div class="feature-check"><div class="check-icon">✓</div><span>Natural language automation builder</span></div>
-            <div class="feature-check"><div class="check-icon">✓</div><span>500+ pre-built trigger templates</span></div>
-            <div class="feature-check"><div class="check-icon">✓</div><span>Full audit trail for every action</span></div>
-          </div>
-        </div>
-        <div class="feature-visual reveal reveal-delay-1">
-          <div class="feature-visual-inner">
-            <div class="fv-card">
-              <div class="fv-card-label">Active Automations</div>
-              <div class="fv-list" style="margin-top:8px">
-                <div class="fv-list-item"><span class="fv-list-name">Weekly digest → Slack</span><span class="fv-pill green">Running</span></div>
-                <div class="fv-list-item"><span class="fv-list-name">Lead scored → Notify sales</span><span class="fv-pill green">Running</span></div>
-                <div class="fv-list-item"><span class="fv-list-name">Invoice due → Alert CFO</span><span class="fv-pill blue">Active</span></div>
-                <div class="fv-list-item"><span class="fv-list-name">Report sync → Drive</span><span class="fv-pill dim">Paused</span></div>
-              </div>
-            </div>
-            <div class="fv-row">
-              <div class="fv-card fv-wide">
-                <div class="fv-card-label">Hours Saved This Month</div>
-                <div class="fv-card-val">148h</div>
-                <div class="fv-card-bar"><div class="fv-card-bar-fill" style="width:91%"></div></div>
-              </div>
-              <div class="fv-card">
-                <div class="fv-card-label">Flows</div>
-                <div class="fv-card-val">24</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Feature 3 -->
-      <div class="feature-row">
-        <div class="feature-content reveal">
-          <div class="feature-number">03 — Team Collaboration</div>
-          <h3 class="feature-title">Comments, context,<br>and <em>clarity</em></h3>
-          <p class="feature-desc">Annotate anything, assign tasks inline, and resolve conversations without switching tabs. The work and the discussion stay together.</p>
-          <div class="feature-checklist">
-            <div class="feature-check"><div class="check-icon">✓</div><span>Inline comments on any data point</span></div>
-            <div class="feature-check"><div class="check-icon">✓</div><span>Threaded task assignments</span></div>
-            <div class="feature-check"><div class="check-icon">✓</div><span>Real-time presence and live cursors</span></div>
-          </div>
-        </div>
-        <div class="feature-visual reveal reveal-delay-1">
-          <div class="feature-visual-inner">
-            <div class="fv-row">
-              <div class="fv-card fv-wide">
-                <div class="fv-card-label">Online Now</div>
-                <div style="display:flex;gap:-4px;margin-top:6px">
-                  <div style="width:28px;height:28px;border-radius:50%;background:var(--accent);border:2px solid var(--surface);display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:#fff">A</div>
-                  <div style="width:28px;height:28px;border-radius:50%;background:var(--accent-mid);border:2px solid var(--surface);display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:#fff;margin-left:-6px">K</div>
-                  <div style="width:28px;height:28px;border-radius:50%;background:#5A6B66;border:2px solid var(--surface);display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:#fff;margin-left:-6px">M</div>
-                  <div style="width:28px;height:28px;border-radius:50%;background:var(--bg-alt);border:2px solid var(--surface);display:flex;align-items:center;justify-content:center;font-size:9px;color:var(--text-2);margin-left:-6px">+5</div>
-                </div>
-              </div>
-              <div class="fv-card">
-                <div class="fv-card-label">Open Tasks</div>
-                <div class="fv-card-val">37</div>
-              </div>
-            </div>
-            <div class="fv-card">
-              <div class="fv-card-label">Recent Comments</div>
-              <div class="fv-list" style="margin-top:8px">
-                <div class="fv-list-item"><span class="fv-list-name">Alex → Q3 chart updated</span><span class="fv-pill green">Resolved</span></div>
-                <div class="fv-list-item"><span class="fv-list-name">Kim → Review needed</span><span class="fv-pill blue">Open</span></div>
-                <div class="fv-list-item"><span class="fv-list-name">Maya → Approved & shipped</span><span class="fv-pill green">Done</span></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ── 6. STATS ── -->
-  <section class="stats-section">
-    <div class="container">
-      <div class="stats-grid">
-        <div class="stat-card reveal">
-          <div class="stat-rule"></div>
-          <div class="stat-value"><span class="stat-num" data-target="50">0</span><span class="stat-suffix">k+</span></div>
-          <div class="stat-label">Teams Worldwide</div>
-          <div class="stat-sublabel">Across 80+ countries</div>
-        </div>
-        <div class="stat-card reveal reveal-delay-1">
-          <div class="stat-rule"></div>
-          <div class="stat-value"><span class="stat-num" data-target="34">0</span><span class="stat-suffix">%</span></div>
-          <div class="stat-label">Avg. Productivity Gain</div>
-          <div class="stat-sublabel">Measured in first 30 days</div>
-        </div>
-        <div class="stat-card reveal reveal-delay-2">
-          <div class="stat-rule"></div>
-          <div class="stat-value"><span class="stat-num" data-target="99" data-decimal="9">0</span><span class="stat-suffix">%</span></div>
-          <div class="stat-label">Uptime SLA</div>
-          <div class="stat-sublabel">Guaranteed and monitored</div>
-        </div>
-        <div class="stat-card reveal reveal-delay-3">
-          <div class="stat-rule"></div>
-          <div class="stat-value"><span class="stat-num" data-target="18">0</span><span class="stat-suffix">h</span></div>
-          <div class="stat-label">Saved Per Team Weekly</div>
-          <div class="stat-sublabel">On average across all plans</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ── 7. PRICING ── -->
-  <section class="pricing-section" id="pricing">
-    <div class="container">
-      <div class="pricing-header">
-        <div class="section-label reveal">Pricing</div>
-        <h2 class="section-title reveal reveal-delay-1">Simple, <em>transparent</em> pricing</h2>
-        <p class="section-sub reveal reveal-delay-2">No hidden fees. No surprise overages. Cancel anytime.</p>
-      </div>
-      <div class="pricing-toggle reveal">
-        <span class="toggle-label active" id="monthlyLabel">Monthly</span>
-        <div class="toggle-switch" id="pricingToggle" role="switch" aria-checked="false" tabindex="0" aria-label="Toggle annual billing"></div>
-        <span class="toggle-label" id="annualLabel">Annual</span>
-        <div class="toggle-badge">Save 35%</div>
-      </div>
-      <div class="pricing-grid">
-        <div class="pricing-card reveal">
-          <div class="pricing-tier">Starter</div>
-          <div class="pricing-price">
-            <span class="price-currency">$</span>
-            <span class="price-amount" id="price-starter">20</span>
-            <span class="price-period">&nbsp;/ mo</span>
-          </div>
-          <div class="price-annual-note" id="annual-note-starter">&nbsp;</div>
-          <p class="pricing-desc">For individuals and small teams getting started with structured workflows.</p>
-          <div class="pricing-divider"></div>
-          <div class="pricing-features">
-            <div class="pricing-feature"><div class="pricing-check">✓</div><span>Up to 5 team members</span></div>
-            <div class="pricing-feature"><div class="pricing-check">✓</div><span>10 active dashboards</span></div>
-            <div class="pricing-feature"><div class="pricing-check">✓</div><span>Basic automations (50/mo)</span></div>
-            <div class="pricing-feature"><div class="pricing-check">✓</div><span>7-day data history</span></div>
-            <div class="pricing-feature"><div class="pricing-check">✓</div><span>Email support</span></div>
-          </div>
-          <a href="#" class="pricing-cta">Learn more</a>
-        </div>
-        <div class="pricing-card featured reveal reveal-delay-1">
-          <div class="pricing-badge">Most Popular</div>
-          <div class="pricing-tier">Professional</div>
-          <div class="pricing-price">
-            <span class="price-currency">$</span>
-            <span class="price-amount" id="price-pro">60</span>
-            <span class="price-period">&nbsp;/ mo</span>
-          </div>
-          <div class="price-annual-note" id="annual-note-pro">&nbsp;</div>
-          <p class="pricing-desc">For growing teams that need powerful automation and advanced reporting.</p>
-          <div class="pricing-divider"></div>
-          <div class="pricing-features">
-            <div class="pricing-feature"><div class="pricing-check">✓</div><span>Up to 25 team members</span></div>
-            <div class="pricing-feature"><div class="pricing-check">✓</div><span>Unlimited dashboards</span></div>
-            <div class="pricing-feature"><div class="pricing-check">✓</div><span>Advanced automations (unlimited)</span></div>
-            <div class="pricing-feature"><div class="pricing-check">✓</div><span>90-day data history</span></div>
-            <div class="pricing-feature"><div class="pricing-check">✓</div><span>Priority chat support</span></div>
-            <div class="pricing-feature"><div class="pricing-check">✓</div><span>Mobile app access</span></div>
-          </div>
-          <a href="#" class="pricing-cta">Learn more</a>
-        </div>
-        <div class="pricing-card reveal reveal-delay-2">
-          <div class="pricing-tier">Enterprise</div>
-          <div class="pricing-price">
-            <span class="price-currency">$</span>
-            <span class="price-amount" id="price-ent">150</span>
-            <span class="price-period">&nbsp;/ mo</span>
-          </div>
-          <div class="price-annual-note" id="annual-note-ent">&nbsp;</div>
-          <p class="pricing-desc">For large organizations with custom requirements and compliance needs.</p>
-          <div class="pricing-divider"></div>
-          <div class="pricing-features">
-            <div class="pricing-feature"><div class="pricing-check">✓</div><span>Unlimited members</span></div>
-            <div class="pricing-feature"><div class="pricing-check">✓</div><span>Custom integrations & API</span></div>
-            <div class="pricing-feature"><div class="pricing-check">✓</div><span>SSO & advanced permissions</span></div>
-            <div class="pricing-feature"><div class="pricing-check">✓</div><span>Unlimited data history</span></div>
-            <div class="pricing-feature"><div class="pricing-check">✓</div><span>Dedicated success manager</span></div>
-            <div class="pricing-feature"><div class="pricing-check">✓</div><span>SOC 2 & compliance reports</span></div>
-          </div>
-          <a href="#" class="pricing-cta">Contact Sales</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ── 8. TESTIMONIALS ── -->
-  <section class="testimonials-section" id="testimonials">
-    <div class="container">
-      <div class="testimonials-header">
-        <div class="section-label reveal">Customer Stories</div>
-        <h2 class="section-title reveal reveal-delay-1">Teams that <em>love</em> Clearwave</h2>
-        <p class="section-sub reveal reveal-delay-2">Don't take our word for it — here's what real teams say after 90 days.</p>
-      </div>
-      <div class="testimonials-grid">
-        <div class="testimonial-card tall reveal">
-          <div class="testimonial-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
-          <p class="testimonial-quote">"We replaced three separate tools with Clearwave and actually have fewer meetings now. The automation flows handle the handoffs our team used to spend mornings sorting out. It's the calmest our workflow has ever felt."</p>
-          <div class="testimonial-author">
-            <div class="author-avatar">SL</div>
-            <div>
-              <div class="author-name">Sarah Lindqvist</div>
-              <div class="author-role">Head of Operations · Stratum IO</div>
-            </div>
-          </div>
-        </div>
-        <div class="testimonial-card reveal reveal-delay-1">
-          <div class="testimonial-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
-          <p class="testimonial-quote">"The mobile app alone justified the switch. I can review dashboards and approve tasks between meetings without opening my laptop."</p>
-          <div class="testimonial-author">
-            <div class="author-avatar">MR</div>
-            <div>
-              <div class="author-name">Marcus Reyes</div>
-              <div class="author-role">Product Director · Meridian</div>
-            </div>
-          </div>
-        </div>
-        <div class="testimonial-card reveal reveal-delay-2">
-          <div class="testimonial-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
-          <p class="testimonial-quote">"Onboarding our 30-person team took one afternoon. The learning curve is genuinely flat."</p>
-          <div class="testimonial-author">
-            <div class="author-avatar">PK</div>
-            <div>
-              <div class="author-name">Priya Kapoor</div>
-              <div class="author-role">Engineering Lead · Vanta Labs</div>
-            </div>
-          </div>
-        </div>
-        <div class="testimonial-card reveal reveal-delay-1">
-          <div class="testimonial-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
-          <p class="testimonial-quote">"The reporting features are leagues ahead of what we had. We can finally show stakeholders live data instead of preparing decks."</p>
-          <div class="testimonial-author">
-            <div class="author-avatar">TW</div>
-            <div>
-              <div class="author-name">Tom Wainwright</div>
-              <div class="author-role">CFO · Pulsar HQ</div>
-            </div>
-          </div>
-        </div>
-        <div class="testimonial-card reveal reveal-delay-2">
-          <div class="testimonial-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
-          <p class="testimonial-quote">"Customer support actually reads your message. Had a custom integration question answered in under two hours."</p>
-          <div class="testimonial-author">
-            <div class="author-avatar">AN</div>
-            <div>
-              <div class="author-name">Aiko Nakamura</div>
-              <div class="author-role">CTO · Nexaflow</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ── 9. INTEGRATIONS ── -->
-  <section class="integrations-section" id="integrations">
-    <div class="container">
-      <div class="integrations-header">
-        <div class="section-label reveal">Integrations</div>
-        <h2 class="section-title reveal reveal-delay-1">Connects with your<br><em>existing stack</em></h2>
-        <p class="section-sub reveal reveal-delay-2">One-click integrations with the tools your team already uses. No dev work required.</p>
-      </div>
-      <div class="integrations-grid">
-        <div class="integration-tile reveal"><div class="integration-name">Slack</div></div>
-        <div class="integration-tile reveal reveal-delay-1"><div class="integration-name">Google Sheets</div></div>
-        <div class="integration-tile reveal reveal-delay-2"><div class="integration-name">Google Drive</div></div>
-        <div class="integration-tile reveal reveal-delay-3"><div class="integration-name">Zapier</div></div>
-        <div class="integration-tile reveal"><div class="integration-name">Stripe</div></div>
-        <div class="integration-tile reveal reveal-delay-1"><div class="integration-name">GitHub</div></div>
-        <div class="integration-tile reveal reveal-delay-2"><div class="integration-name">Notion</div></div>
-        <div class="integration-tile reveal reveal-delay-3"><div class="integration-name">Mailchimp</div></div>
-        <div class="integration-tile reveal"><div class="integration-name">HubSpot</div></div>
-        <div class="integration-tile reveal reveal-delay-1"><div class="integration-name">Airtable</div></div>
-        <div class="integration-tile reveal reveal-delay-2"><div class="integration-name">Intercom</div></div>
-        <div class="integration-tile reveal reveal-delay-3"><div class="integration-name">Salesforce</div></div>
-        <div class="integration-tile reveal"><div class="integration-name">Figma</div></div>
-        <div class="integration-tile reveal reveal-delay-1"><div class="integration-name">Linear</div></div>
-        <div class="integration-tile reveal reveal-delay-2"><div class="integration-name">Jira</div></div>
-        <div class="integration-tile reveal reveal-delay-3"><div class="integration-name">Webflow</div></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ── 10. FAQ ── -->
-  <section class="faq-section" id="faq">
-    <div class="container">
-      <div class="faq-inner">
-        <div class="faq-sidebar reveal">
-          <div class="section-label">FAQ</div>
-          <h2 class="section-title">Questions,<br><em>answered</em></h2>
-          <p class="section-sub">Can't find what you're looking for? Reach our team at <a href="#" class="__cf_email__" data-cfemail="056d6069696a456669606477726473602b6c6a">[email&#160;protected]</a> — we reply within 2 hours.</p>
-          <button class="faq-toggle-all" id="faqToggleAll">
-            <span id="faqToggleIcon">+</span> Expand all</button>
-        </div>
-        <div class="faq-list reveal reveal-delay-1" id="faqList">
-          <div class="faq-item">
-            <div class="faq-question" tabindex="0" role="button" aria-expanded="false">
-              Is there a free trial?
-              <div class="faq-icon">+</div>
-            </div>
-            <div class="faq-answer"><div class="faq-answer-inner">Yes — every plan starts with a 14-day free trial, no credit card required. You get full access to all features in your chosen tier so you can make a real evaluation before committing.</div></div>
-          </div>
-          <div class="faq-item">
-            <div class="faq-question" tabindex="0" role="button" aria-expanded="false">
-              How does pricing work for larger teams?
-              <div class="faq-icon">+</div>
-            </div>
-            <div class="faq-answer"><div class="faq-answer-inner">Starter and Professional plans are per-workspace, not per-seat — so you won't see surprise bills as your team grows. Enterprise plans are custom-quoted based on your specific needs and contract length.</div></div>
-          </div>
-          <div class="faq-item">
-            <div class="faq-question" tabindex="0" role="button" aria-expanded="false">
-              Can I migrate data from another tool?
-              <div class="faq-icon">+</div>
-            </div>
-            <div class="faq-answer"><div class="faq-answer-inner">We support CSV imports and direct migration from Notion, Airtable, Asana, and Trello. Enterprise customers get a dedicated migration specialist who handles the entire process for you.</div></div>
-          </div>
-          <div class="faq-item">
-            <div class="faq-question" tabindex="0" role="button" aria-expanded="false">
-              What does the 99.9% uptime SLA mean?
-              <div class="faq-icon">+</div>
-            </div>
-            <div class="faq-answer"><div class="faq-answer-inner">It means Clearwave is contractually committed to less than 8.7 hours of downtime per year. We monitor availability 24/7, post all incidents publicly at status.clearwave.io, and issue credits automatically if SLA is breached.</div></div>
-          </div>
-          <div class="faq-item">
-            <div class="faq-question" tabindex="0" role="button" aria-expanded="false">
-              Is my data secure?
-              <div class="faq-icon">+</div>
-            </div>
-            <div class="faq-answer"><div class="faq-answer-inner">Clearwave is SOC 2 Type II certified, GDPR compliant, and ISO 27001 aligned. All data is encrypted in transit and at rest. You can request a full security report from our compliance team at any time.</div></div>
-          </div>
-          <div class="faq-item">
-            <div class="faq-question" tabindex="0" role="button" aria-expanded="false">
-              Can I cancel anytime?
-              <div class="faq-icon">+</div>
-            </div>
-            <div class="faq-answer"><div class="faq-answer-inner">Yes. There are no lock-in contracts on monthly plans. Cancel from your account settings at any time and you won't be charged again. Annual plans are non-refundable but can be cancelled to stop renewal.</div></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ── 11. CTA BANNER ── -->
-  <section class="cta-section">
-    <div class="container">
-      <div class="cta-inner reveal">
-        <div class="cta-content">
-          <div class="cta-label">✦ Get Started Today</div>
-          <h2 class="cta-title">Ready for a<br><em>clearer workflow?</em></h2>
-          <p class="cta-sub">Join 50,000+ teams who replaced chaos with clarity. Set up in under 10 minutes.</p>
-        </div>
-        <div class="cta-actions">
-          <a href="#" class="btn-cta-primary">
-            Learn more
-            <span>→</span>
-          </a>
-          <a href="#" class="btn-cta-ghost">Schedule a demo</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ── 12. FOOTER ── -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <a href="#" class="nav-logo">clear<span style="color:var(--accent-light)">wave</span></a>
-          <p class="footer-brand-desc">The calm, powerful workspace for teams that want to focus on work — not on managing it.</p>
-          <div class="footer-socials">
-            <a href="#" class="social-btn" aria-label="Twitter / X">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-            </a>
-            <a href="#" class="social-btn" aria-label="LinkedIn">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-            </a>
-            <a href="#" class="social-btn" aria-label="YouTube">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
-            </a>
-            <a href="#" class="social-btn" aria-label="TikTok">
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
-            </a>
-          </div>
-        </div>
-        <div>
-          <div class="footer-col-label">Product</div>
-          <div class="footer-links">
-            <a href="#features">Features</a>
-            <a href="#screens">Mobile App</a>
-            <a href="#pricing">Pricing</a>
-            <a href="#integrations">Integrations</a>
-            <a href="#">Changelog</a>
-          </div>
-        </div>
-        <div>
-          <div class="footer-col-label">Company</div>
-          <div class="footer-links">
-            <a href="#">About</a>
-            <a href="#">Blog</a>
-            <a href="#">Careers</a>
-            <a href="#">Press Kit</a>
-            <a href="#">Status</a>
-          </div>
-        </div>
-        <div>
-          <div class="footer-col-label">Support</div>
-          <div class="footer-links">
-            <a href="#">Help Center</a>
-            <a href="#">Documentation</a>
-            <a href="#">Security</a>
-            <a href="#">Contact</a>
-            <a href="#">Community</a>
-          </div>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <div class="footer-copy">
-          © 2026 Clearwave. Design by <a rel="nofollow" href="https://templatemo.com" target="_blank">TemplateMo</a>
-        </div>
-        <div class="footer-legal">
-          <a href="#">Privacy Policy</a>
-          <a href="#">Terms of Service</a>
-          <a href="#">Cookie Policy</a>
-        </div>
-      </div>
-    </div>
-  </footer>
-
-  {{-- <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script> --}}
-  <script src="https://templatemo.com/templates/templatemo_622_clearwave/templatemo-622-clearwave.js"></script>
-<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v4bc70e2c01a94c73b74392e4234840661791215815920" integrity="sha512-L0ha0OXavK/8okipN9F8BtP84dg9DUhPERbBXzwI6dgTA55d2+yweo3pn5CSFYs45/r8md2+xvUPtTdvTNRfjA==" data-cf-beacon='{"version":"2024.11.0","token":"c4ca6eb172664bf883440371cc8d12bf","r":1,"spa":2}' crossorigin="anonymous"></script>
-</body>
-</html>
+          requestAnimationFrame(() => {
+            setTheme(theme)
+            showActiveTheme(theme)
+          })
+        })
+      })
+    })
+  })()
+</script><link href="/docs/6.0/dist/css/bootstrap.min.css" rel="stylesheet"><link rel="apple-touch-icon" href="/docs/6.0/assets/img/favicons/apple-touch-icon.png" sizes="180x180"><link rel="icon" href="/docs/6.0/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png"><link rel="icon" href="/docs/6.0/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png"><link rel="manifest" href="/docs/6.0/assets/img/favicons/manifest.json"><link rel="mask-icon" href="/docs/6.0/assets/img/favicons/safari-pinned-tab.svg" color="#712cf9"><link rel="icon" href="/docs/6.0/assets/img/favicons/favicon.ico"><meta name="theme-color" content="#712cf9"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:site" content="@getbootstrap"><meta name="twitter:creator" content="@getbootstrap"><meta property="og:url" content="https://getbootstrap.com/"><meta property="og:title" content="Bootstrap"><meta property="og:description" content="Powerful, extensible, and feature-packed frontend toolkit. Build and customize with Sass, utilize prebuilt grid system and components, and bring projects to life with powerful JavaScript plugins."><meta property="og:type" content="website"><meta property="og:image" content="https://getbootstrap.com/docs/6.0/assets/brand/bootstrap-social.png"><meta property="og:image:type" content="image/png"><meta property="og:image:width" content="2000"><meta property="og:image:height" content="1000"><script type="speculationrules">
+    {
+      "prerender": [
+        {
+          "where": {
+            "href_matches": "/*"
+          },
+          "eagerness": "moderate"
+        }
+      ]
+    }
+  </script>
+<link rel="stylesheet" href="/docs/6.0/assets/ScssProd.2L6G2bjf.css"></head><body><div class="navbar-translucent sticky-top bd-sticky-navbar"><svg xmlns="http://www.w3.org/2000/svg" class="d-none"><symbol id="arrow-counterclockwise" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8 3a5 5 0 1 1-4.546 2.914.5.5 0 0 0-.908-.417A6 6 0 1 0 8 2z"></path><path d="M8 4.466V.534a.25.25 0 0 0-.41-.192L5.23 2.308a.25.25 0 0 0 0 .384l2.36 1.966A.25.25 0 0 0 8 4.466"></path></symbol><symbol id="arrow-right" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"></path></symbol><symbol id="arrow-right-short" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8"></path></symbol><symbol id="aspect-ratio" viewBox="0 0 16 16"><path d="M0 3.5A1.5 1.5 0 0 1 1.5 2h13A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 12.5zM1.5 3a.5.5 0 0 0-.5.5v9a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5z"></path><path d="M2 4.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1H3v2.5a.5.5 0 0 1-1 0zm12 7a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1 0-1H13V8.5a.5.5 0 0 1 1 0z"></path></symbol><symbol id="aspect-ratio-fill" viewBox="0 0 16 16"><path fill="currentcolor" fill-rule="evenodd" d="M13.5 1A2.5 2.5 0 0 1 16 3.5v9a2.5 2.5 0 0 1-2.5 2.5h-11A2.5 2.5 0 0 1 0 12.5v-9A2.5 2.5 0 0 1 2.5 1zm0 8a.5.5 0 0 0-.5.5V12h-2.5a.5.5 0 0 0 0 1h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5m-11-6a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 1 0V4h2.5a.5.5 0 0 0 0-1z" clip-rule="evenodd"></path></symbol><symbol id="book-half" viewBox="0 0 16 16"><path d="M8.5 2.687c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z"></path></symbol><symbol id="bounding-box" viewBox="0 0 16 16"><path d="M5 2V0H0v5h2v6H0v5h5v-2h6v2h5v-5h-2V5h2V0h-5v2zm6 1v2h2v6h-2v2H5v-2H3V5h2V3zm1-2h3v3h-3zm3 11v3h-3v-3zM4 15H1v-3h3zM1 4V1h3v3z"></path></symbol><symbol id="bounding-box-fill" viewBox="0 0 16 16"><path d="M3 12a1 1 0 0 1 1 1v.5h8V13a1 1 0 0 1 1-1h.5V4H13a1 1 0 0 1-1-1v-.5H4V3a1 1 0 0 1-1 1h-.5v8zm-2 3h2v-2H1zm12 0h2v-2h-2zM1 3h2V1H1zm12 0h2V1h-2zm1.5 9h.5a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1v-.5H4v.5a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1v-2a1 1 0 0 1 1-1h.5V4H1a1 1 0 0 1-1-1V1a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v.5h8V1a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-.5z"></path><path d="M10 4a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2zm0 3.5a.5.5 0 0 0-.5.5v1.5H8a.5.5 0 0 0 0 1h2a.5.5 0 0 0 .5-.5V8a.5.5 0 0 0-.5-.5m-4-2a.5.5 0 0 0-.5.5v2a.5.5 0 0 0 1 0V6.5H8a.5.5 0 0 0 0-1z"></path><path fill-rule="evenodd" d="M14.5 12h.5a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1v-.5H4v.5a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1v-2a1 1 0 0 1 1-1h.5V4H1a1 1 0 0 1-1-1V1a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v.5h8V1a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-.5zM3 12a1 1 0 0 1 1 1v.5h8V13a1 1 0 0 1 1-1h.5V4H13a1 1 0 0 1-1-1v-.5H4V3a1 1 0 0 1-1 1h-.5v8zm-2 3h2v-2H1zm12 0h2v-2h-2zM1 3h2V1H1zm12 0h2V1h-2z" clip-rule="evenodd"></path><path fill-rule="evenodd" d="M10 4a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2zm0 3.5a.5.5 0 0 0-.5.5v1.5H8a.5.5 0 0 0 0 1h2a.5.5 0 0 0 .5-.5V8a.5.5 0 0 0-.5-.5m-4-2a.5.5 0 0 0-.5.5v2a.5.5 0 0 0 1 0V6.5H8a.5.5 0 0 0 0-1z" clip-rule="evenodd"></path></symbol><symbol id="box-arrow-up-right" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5"></path><path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0z"></path></symbol><symbol id="box-seam" viewBox="0 0 16 16"><path d="M8.186 1.113a.5.5 0 0 0-.372 0L1.846 3.5l2.404.961L10.404 2l-2.218-.887zm3.564 1.426L5.596 5 8 5.961 14.154 3.5l-2.404-.961zm3.25 1.7-6.5 2.6v7.922l6.5-2.6V4.24zM7.5 14.762V6.838L1 4.239v7.923l6.5 2.6zM7.443.184a1.5 1.5 0 0 1 1.114 0l7.129 2.852A.5.5 0 0 1 16 3.5v8.662a1 1 0 0 1-.629.928l-7.185 2.874a.5.5 0 0 1-.372 0L.63 13.09a1 1 0 0 1-.63-.928V3.5a.5.5 0 0 1 .314-.464L7.443.184z"></path></symbol><symbol id="box-seam-fill" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M15.528 2.973a.75.75 0 0 1 .472.696v8.662a.75.75 0 0 1-.472.696l-7.25 2.9a.75.75 0 0 1-.557 0l-7.25-2.9A.75.75 0 0 1 0 12.331V3.669a.75.75 0 0 1 .471-.696L7.443.184l.01-.003.268-.108a.75.75 0 0 1 .558 0l.269.108.01.003zM10.404 2 4.25 4.461 1.846 3.5 1 3.839v.4l6.5 2.6v7.922l.5.2.5-.2V6.84l6.5-2.6v-.4l-.846-.339L8 5.961 5.596 5l6.154-2.461z"></path></symbol><symbol id="braces" viewBox="0 0 16 16"><path d="M2.114 8.063V7.9c1.005-.102 1.497-.615 1.497-1.6V4.503c0-1.094.39-1.538 1.354-1.538h.273V2h-.376C3.25 2 2.49 2.759 2.49 4.352v1.524c0 1.094-.376 1.456-1.49 1.456v1.299c1.114 0 1.49.362 1.49 1.456v1.524c0 1.593.759 2.352 2.372 2.352h.376v-.964h-.273c-.964 0-1.354-.444-1.354-1.538V9.663c0-.984-.492-1.497-1.497-1.6zM13.886 7.9v.163c-1.005.103-1.497.616-1.497 1.6v1.798c0 1.094-.39 1.538-1.354 1.538h-.273v.964h.376c1.613 0 2.372-.759 2.372-2.352v-1.524c0-1.094.376-1.456 1.49-1.456V7.332c-1.114 0-1.49-.362-1.49-1.456V4.352C13.51 2.759 12.75 2 11.138 2h-.376v.964h.273c.964 0 1.354.444 1.354 1.538V6.3c0 .984.492 1.497 1.497 1.6z"></path></symbol><symbol id="braces-asterisk" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.114 8.063V7.9c1.005-.102 1.497-.615 1.497-1.6V4.503c0-1.094.39-1.538 1.354-1.538h.273V2h-.376C2.25 2 1.49 2.759 1.49 4.352v1.524c0 1.094-.376 1.456-1.49 1.456v1.299c1.114 0 1.49.362 1.49 1.456v1.524c0 1.593.759 2.352 2.372 2.352h.376v-.964h-.273c-.964 0-1.354-.444-1.354-1.538V9.663c0-.984-.492-1.497-1.497-1.6ZM14.886 7.9v.164c-1.005.103-1.497.616-1.497 1.6v1.798c0 1.094-.39 1.538-1.354 1.538h-.273v.964h.376c1.613 0 2.372-.759 2.372-2.352v-1.524c0-1.094.376-1.456 1.49-1.456v-1.3c-1.114 0-1.49-.362-1.49-1.456V4.352C14.51 2.759 13.75 2 12.138 2h-.376v.964h.273c.964 0 1.354.444 1.354 1.538V6.3c0 .984.492 1.497 1.497 1.6ZM7.5 11.5V9.207l-1.621 1.621-.707-.707L6.792 8.5H4.5v-1h2.293L5.172 5.879l.707-.707L7.5 6.792V4.5h1v2.293l1.621-1.621.707.707L9.208 7.5H11.5v1H9.207l1.621 1.621-.707.707L8.5 9.208V11.5h-1Z"></path></symbol><symbol id="calendar-week" viewBox="0 0 16 16"><path d="M11 6.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm-3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm-5 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5z"></path><path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5M1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4z"></path></symbol><symbol id="check2" viewBox="0 0 16 16"><path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"></path></symbol><symbol id="chevron-expand" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M3.646 9.146a.5.5 0 0 1 .708 0L8 12.793l3.646-3.647a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 0-.708zm0-2.292a.5.5 0 0 0 .708 0L8 3.207l3.646 3.647a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 0 0 0 .708z"></path></symbol><symbol id="circle-half" viewBox="0 0 16 16"><path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"></path></symbol><symbol id="clipboard" viewBox="0 0 16 16"><path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"></path><path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"></path></symbol><symbol id="copy" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M4 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 5a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-1h1v1a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h1v1z"></path></symbol><symbol id="filetype-css" viewBox="0 0 16 16"><path fill="currentcolor" fill-rule="evenodd" d="M13 0a3 3 0 0 1 3 3v10a3 3 0 0 1-3 3H3a3 3 0 0 1-3-3V0zM4.002 6.498q-.908 0-1.455.508Q2 7.513 2 8.49v3.106q0 .986.527 1.484t1.407.498a2.2 2.2 0 0 0 1.015-.224q.45-.225.703-.674.255-.449.254-1.114v-.185h-1.22v.176q0 .45-.186.683t-.527.235q-.371-.01-.557-.264-.186-.255-.186-.752V8.686q0-.547.166-.811.177-.264.577-.264.322 0 .517.225.196.224.196.693v.205h1.23V8.52q0-.674-.244-1.124a1.55 1.55 0 0 0-.664-.673q-.42-.225-1.006-.225m4.214-.01q-.585 0-1.006.244a1.67 1.67 0 0 0-.635.674 2.1 2.1 0 0 0-.224.996q0 .753.293 1.182.302.42.966.732l.47.215q.438.186.624.43t.186.635q0 .478-.166.703-.157.224-.528.224-.36 0-.547-.244-.185-.243-.205-.752H6.282q.02.996.498 1.524.48.527 1.387.527.908 0 1.416-.518.508-.517.508-1.484 0-.81-.332-1.289-.333-.479-1.045-.79l-.45-.196q-.39-.166-.556-.381-.165-.214-.166-.576 0-.4.166-.596.176-.195.508-.195.36 0 .508.234.156.234.175.703h1.124q-.03-.976-.499-1.484-.468-.518-1.308-.518m4.057 0q-.586 0-1.005.244a1.67 1.67 0 0 0-.635.674 2.1 2.1 0 0 0-.225.996q0 .753.293 1.182.303.42.967.732l.469.215q.44.186.625.43t.185.635q0 .478-.166.703-.156.224-.527.224-.36 0-.547-.244-.186-.243-.205-.752H10.34q.02.996.498 1.524.478.527 1.387.527.908 0 1.416-.518.507-.517.507-1.484 0-.81-.332-1.289t-1.045-.79l-.449-.196q-.39-.166-.556-.381-.166-.214-.166-.576 0-.4.166-.596.176-.195.507-.195.361 0 .508.234.156.234.176.703h1.123q-.03-.976-.498-1.484-.469-.518-1.309-.518" clip-rule="evenodd"></path></symbol><symbol id="envelope" viewBox="0 0 16 16"><path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z"></path></symbol><symbol id="exclamation-triangle-fill" viewBox="0 0 16 16"><path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5m.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2"></path></symbol><symbol id="file-earmark-richtext" viewBox="0 0 16 16"><path d="M14 4.5V14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h5.5L14 4.5zm-3 0A1.5 1.5 0 0 1 9.5 3V1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V4.5h-2z"></path><path d="M4.5 12.5A.5.5 0 0 1 5 12h3a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5zm0-2A.5.5 0 0 1 5 10h6a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5zm1.639-3.708 1.33.886 1.854-1.855a.25.25 0 0 1 .289-.047l1.888.974V8.5a.5.5 0 0 1-.5.5H5a.5.5 0 0 1-.5-.5V8s1.54-1.274 1.639-1.208zM6.25 6a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5z"></path></symbol><symbol id="github" viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"></path></symbol><symbol id="filetype-js" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M13 0a3 3 0 0 1 3 3v10a3 3 0 0 1-3 3H3a3 3 0 0 1-3-3V3a3 3 0 0 1 3-3zM8.053 6.596v3.127l-.007 1.752q0 .498-.186.752t-.556.263q-.342 0-.528-.234-.185-.234-.185-.684v-.175H5.37v.185q0 .665.253 1.113.255.45.703.674.44.225 1.016.225.88 0 1.406-.498.527-.498.527-1.485l.007-1.752V6.596zm3.808-.108q-.585 0-1.006.244a1.67 1.67 0 0 0-.634.674 2.1 2.1 0 0 0-.225.996q0 .753.293 1.182.303.42.967.732l.469.215q.438.186.625.43.185.244.185.635 0 .478-.166.703-.156.224-.527.224-.361.001-.547-.244-.186-.243-.205-.752H9.928q.02.996.498 1.524.479.527 1.386.527.909 0 1.417-.518.507-.517.507-1.484 0-.81-.332-1.289t-1.045-.79L11.91 9.3q-.39-.166-.556-.381-.166-.214-.166-.576 0-.4.165-.596.177-.195.508-.195.361 0 .508.234.156.234.176.703h1.123q-.03-.976-.498-1.484-.47-.518-1.309-.518" clip-rule="evenodd"></path></symbol><symbol id="grid-fill" viewBox="0 0 16 16"><path d="M1 2.5A1.5 1.5 0 0 1 2.5 1h3A1.5 1.5 0 0 1 7 2.5v3A1.5 1.5 0 0 1 5.5 7h-3A1.5 1.5 0 0 1 1 5.5v-3zm8 0A1.5 1.5 0 0 1 10.5 1h3A1.5 1.5 0 0 1 15 2.5v3A1.5 1.5 0 0 1 13.5 7h-3A1.5 1.5 0 0 1 9 5.5v-3zm-8 8A1.5 1.5 0 0 1 2.5 9h3A1.5 1.5 0 0 1 7 10.5v3A1.5 1.5 0 0 1 5.5 15h-3A1.5 1.5 0 0 1 1 13.5v-3zm8 0A1.5 1.5 0 0 1 10.5 9h3a1.5 1.5 0 0 1 1.5 1.5v3a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 13.5v-3z"></path></symbol><symbol id="hash" viewBox="0 0 16 16"><path d="M8.39 12.648a1 1 0 0 0-.015.18c0 .305.21.508.5.508.266 0 .492-.172.555-.477l.554-2.703h1.204c.421 0 .617-.234.617-.547 0-.312-.188-.53-.617-.53h-.985l.516-2.524h1.265c.43 0 .618-.227.618-.547 0-.313-.188-.524-.618-.524h-1.046l.476-2.304a1 1 0 0 0 .016-.164.51.51 0 0 0-.516-.516.54.54 0 0 0-.539.43l-.523 2.554H7.617l.477-2.304c.008-.04.015-.118.015-.164a.51.51 0 0 0-.523-.516.54.54 0 0 0-.531.43L6.53 5.484H5.414c-.43 0-.617.22-.617.532s.187.539.617.539h.906l-.515 2.523H4.609c-.421 0-.609.219-.609.531s.188.547.61.547h.976l-.516 2.492c-.008.04-.015.125-.015.18 0 .305.21.508.5.508.265 0 .492-.172.554-.477l.555-2.703h2.242zm-1-6.109h2.266l-.515 2.563H6.859l.532-2.563z"></path></symbol><symbol id="lightning-charge-fill" viewBox="0 0 16 16"><path d="M11.251.068a.5.5 0 0 1 .227.58L9.677 6.5H13a.5.5 0 0 1 .364.843l-8 8.5a.5.5 0 0 1-.842-.49L6.323 9.5H3a.5.5 0 0 1-.364-.843l8-8.5a.5.5 0 0 1 .615-.09z"></path></symbol><symbol id="layers" viewBox="0 0 16 16"><path d="M15.106 11.554a.5.5 0 0 1 0 .894l-6.659 3.33-.107.045a1 1 0 0 1-.68 0l-.107-.046-6.658-3.329a.5.5 0 0 1 0-.895l1.988-.994 1.677.838-1.206.604L8 14.323l4.646-2.322-1.207-.604 1.678-.838z" opacity=".5"></path><path fill-rule="evenodd" d="M7.553.223a1 1 0 0 1 .894 0l6.659 3.33a.5.5 0 0 1 0 .894l-6.659 3.33-.107.045a1 1 0 0 1-.68 0l-.107-.046L.895 4.447a.5.5 0 0 1 0-.894zM3.354 4 8 6.322 12.646 4 8 1.677z" clip-rule="evenodd" opacity=".5"></path><path d="M15.106 7.554a.5.5 0 0 1 0 .894l-6.659 3.33c-.281.14-.613.14-.894 0L.895 8.447a.5.5 0 0 1 0-.894l1.988-.995 4.222 2.112a2 2 0 0 0 1.79 0l4.222-2.112z"></path></symbol><symbol id="list" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"></path></symbol><symbol id="magic" viewBox="0 0 16 16"><path d="M9.5 2.672a.5.5 0 1 0 1 0V.843a.5.5 0 0 0-1 0v1.829Zm4.5.035A.5.5 0 0 0 13.293 2L12 3.293a.5.5 0 1 0 .707.707L14 2.707ZM7.293 4A.5.5 0 1 0 8 3.293L6.707 2A.5.5 0 0 0 6 2.707L7.293 4Zm-.621 2.5a.5.5 0 1 0 0-1H4.843a.5.5 0 1 0 0 1h1.829Zm8.485 0a.5.5 0 1 0 0-1h-1.829a.5.5 0 0 0 0 1h1.829ZM13.293 10A.5.5 0 1 0 14 9.293L12.707 8a.5.5 0 1 0-.707.707L13.293 10ZM9.5 11.157a.5.5 0 0 0 1 0V9.328a.5.5 0 0 0-1 0v1.829Zm1.854-5.097a.5.5 0 0 0 0-.706l-.708-.708a.5.5 0 0 0-.707 0L8.646 5.94a.5.5 0 0 0 0 .707l.708.708a.5.5 0 0 0 .707 0l1.293-1.293Zm-3 3a.5.5 0 0 0 0-.706l-.708-.708a.5.5 0 0 0-.707 0L.646 13.94a.5.5 0 0 0 0 .707l.708.708a.5.5 0 0 0 .707 0L8.354 9.06Z"></path></symbol><symbol id="map" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M15.817.113A.5.5 0 0 1 16 .5v14a.5.5 0 0 1-.402.49l-5 1a.5.5 0 0 1-.196 0L5.5 15.01l-4.902.98A.5.5 0 0 1 0 15.5v-14a.5.5 0 0 1 .402-.49l5-1a.5.5 0 0 1 .196 0L10.5.99l4.902-.98a.5.5 0 0 1 .415.103M10 1.91l-4-.8v12.98l4 .8zm1 12.98 4-.8V1.11l-4 .8zm-6-.8V1.11l-4 .8v12.98z"></path></symbol><symbol id="menu-button-wide-fill" viewBox="0 0 16 16"><path d="M1.5 0A1.5 1.5 0 0 0 0 1.5v2A1.5 1.5 0 0 0 1.5 5h13A1.5 1.5 0 0 0 16 3.5v-2A1.5 1.5 0 0 0 14.5 0h-13zm1 2h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1 0-1zm9.927.427A.25.25 0 0 1 12.604 2h.792a.25.25 0 0 1 .177.427l-.396.396a.25.25 0 0 1-.354 0l-.396-.396zM0 8a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V8zm1 3v2a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2H1zm14-1V8a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v2h14zM2 8.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0 4a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5z"></path></symbol><symbol id="moon-stars-fill" viewBox="0 0 16 16"><path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"></path><path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"></path></symbol><symbol id="palette2" viewBox="0 0 16 16"><path d="M0 .5A.5.5 0 0 1 .5 0h5a.5.5 0 0 1 .5.5v5.277l4.147-4.131a.5.5 0 0 1 .707 0l3.535 3.536a.5.5 0 0 1 0 .708L10.261 10H15.5a.5.5 0 0 1 .5.5v5a.5.5 0 0 1-.5.5H3a2.99 2.99 0 0 1-2.121-.879A2.99 2.99 0 0 1 0 13.044m6-.21 7.328-7.3-2.829-2.828L6 7.188v5.647zM4.5 13a1.5 1.5 0 1 0-3 0 1.5 1.5 0 0 0 3 0zM15 15v-4H9.258l-4.015 4H15zM0 .5v12.495V.5z"></path><path d="M0 12.995V13a3.07 3.07 0 0 0 0-.005z"></path></symbol><symbol id="plus" viewBox="0 0 16 16"><path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"></path></symbol><symbol id="rocket-takeoff-fill" viewBox="0 0 16 16"><path d="M12.17 9.53c2.307-2.592 3.278-4.684 3.641-6.218.21-.887.214-1.58.16-2.065a3.6 3.6 0 0 0-.108-.563 2 2 0 0 0-.078-.23V.453c-.073-.164-.168-.234-.352-.295a2 2 0 0 0-.16-.045 4 4 0 0 0-.57-.093c-.49-.044-1.19-.03-2.08.188-1.536.374-3.618 1.343-6.161 3.604l-2.4.238h-.006a2.55 2.55 0 0 0-1.524.734L.15 7.17a.512.512 0 0 0 .433.868l1.896-.271c.28-.04.592.013.955.132.232.076.437.16.655.248l.203.083c.196.816.66 1.58 1.275 2.195.613.614 1.376 1.08 2.191 1.277l.082.202c.089.218.173.424.249.657.118.363.172.676.132.956l-.271 1.9a.512.512 0 0 0 .867.433l2.382-2.386c.41-.41.668-.949.732-1.526zm.11-3.699c-.797.8-1.93.961-2.528.362-.598-.6-.436-1.733.361-2.532.798-.799 1.93-.96 2.528-.361s.437 1.732-.36 2.531Z"></path><path d="M5.205 10.787a7.6 7.6 0 0 0 1.804 1.352c-1.118 1.007-4.929 2.028-5.054 1.903-.126-.127.737-4.189 1.839-5.18.346.69.837 1.35 1.411 1.925"></path></symbol><symbol id="search" viewBox="0 0 16 16"><path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"></path></symbol><symbol id="stack" viewBox="0 0 16 16"><path d="m14.12 10.163 1.715.858c.22.11.22.424 0 .534L8.267 15.34a.6.6 0 0 1-.534 0L.165 11.555a.299.299 0 0 1 0-.534l1.716-.858 5.317 2.659c.505.252 1.1.252 1.604 0l5.317-2.66zM7.733.063a.6.6 0 0 1 .534 0l7.568 3.784a.3.3 0 0 1 0 .535L8.267 8.165a.6.6 0 0 1-.534 0L.165 4.382a.299.299 0 0 1 0-.535z"></path><path d="m14.12 6.576 1.715.858c.22.11.22.424 0 .534l-7.568 3.784a.6.6 0 0 1-.534 0L.165 7.968a.299.299 0 0 1 0-.534l1.716-.858 5.317 2.659c.505.252 1.1.252 1.604 0z"></path></symbol><symbol id="sun-fill" viewBox="0 0 16 16"><path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"></path></symbol><symbol id="three-dots" viewBox="0 0 16 16"><path d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"></path></symbol><symbol id="tools" viewBox="0 0 16 16"><path d="M1 0 0 1l2.2 3.081a1 1 0 0 0 .815.419h.07a1 1 0 0 1 .708.293l2.675 2.675-2.617 2.654A3.003 3.003 0 0 0 0 13a3 3 0 1 0 5.878-.851l2.654-2.617.968.968-.305.914a1 1 0 0 0 .242 1.023l3.356 3.356a1 1 0 0 0 1.414 0l1.586-1.586a1 1 0 0 0 0-1.414l-3.356-3.356a1 1 0 0 0-1.023-.242L10.5 9.5l-.96-.96 2.68-2.643A3.005 3.005 0 0 0 16 3c0-.269-.035-.53-.102-.777l-2.14 2.141L12 4l-.364-1.757L13.777.102a3 3 0 0 0-3.675 3.68L7.462 6.46 4.793 3.793a1 1 0 0 1-.293-.707v-.071a1 1 0 0 0-.419-.814L1 0zm9.646 10.646a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708zM3 11l.471.242.529.026.287.445.445.287.026.529L5 13l-.242.471-.026.529-.445.287-.287.445-.529.026L3 15l-.471-.242L2 14.732l-.287-.445L1.268 14l-.026-.529L1 13l.242-.471.026-.529.445-.287.287-.445.529-.026L3 11z"></path></symbol><symbol id="ui-radios" viewBox="0 0 16 16"><path d="M7 2.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-7a.5.5 0 0 1-.5-.5v-1zM0 12a3 3 0 1 1 6 0 3 3 0 0 1-6 0zm7-1.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-7a.5.5 0 0 1-.5-.5v-1zm0-5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm0 8a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zM3 1a3 3 0 1 0 0 6 3 3 0 0 0 0-6zm0 4.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"></path></symbol></svg><div class="skippy visually-hidden-focusable overflow-hidden"><div class="xl:container"><a class="d-inline-flex p-2 m-1" href="#content">Skip to main content</a></div></div><header class="navbar lg:navbar-expand bd-navbar border-bottom border-inverse border-20"><nav class="2xl:container bd-gutter flex-wrap lg:flex-nowrap justify-content-start" aria-label="Main navigation"><div class="d-flex align-items-center gap-2 lg:gap-1"><a class="navbar-brand p-0 me-0 lg:me-2" href="/" aria-label="Bootstrap" style="color: var(--bs-indigo-500);"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 118 94" role="img" class="d-block my-1" height="32" width="40"><title>Bootstrap</title><path fill-rule="evenodd" clip-rule="evenodd" d="M24.509 0c-6.733 0-11.715 5.893-11.492 12.284.214 6.14-.064 14.092-2.066 20.577C8.943 39.365 5.547 43.485 0 44.014v5.972c5.547.529 8.943 4.649 10.951 11.153 2.002 6.485 2.28 14.437 2.066 20.577C12.794 88.106 17.776 94 24.51 94H93.5c6.733 0 11.714-5.893 11.491-12.284-.214-6.14.064-14.092 2.066-20.577 2.009-6.504 5.396-10.624 10.943-11.153v-5.972c-5.547-.529-8.934-4.649-10.943-11.153-2.002-6.484-2.28-14.437-2.066-20.577C105.214 5.894 100.233 0 93.5 0H24.508zM80 57.863C80 66.663 73.436 72 62.543 72H44a2 2 0 01-2-2V24a2 2 0 012-2h18.437c9.083 0 15.044 4.92 15.044 12.474 0 5.302-4.01 10.049-9.119 10.88v.277C75.317 46.394 80 51.21 80 57.863zM60.521 28.34H49.948v14.934h8.905c6.884 0 10.68-2.772 10.68-7.727 0-4.643-3.264-7.207-9.012-7.207zM49.948 49.2v16.458H60.91c7.167 0 10.964-2.876 10.964-8.281 0-5.406-3.903-8.178-11.425-8.178H49.948z" fill="currentColor"></path></svg></a><span class="lg:d-none fg-4">/</span><div class="nav-item lg:d-none"><button class="nav-link fw-medium d-inline-flex align-items-center gap-1 px-0" type="button" data-bs-toggle="menu" aria-expanded="false">Home<svg class="bi bi-sm" aria-hidden="true"><use href="#chevron-expand"></use></svg></button><div class="menu border-keyline"><a class="menu-item active" href="/">Home<svg class="bi ms-auto" aria-hidden="true"><use href="#check2"></use></svg></a><a class="menu-item" href="/docs/6.0/getting-started/install/">Docs</a><a class="menu-item" href="https://icons.getbootstrap.com/" target="_blank" rel="noopener">Icons<svg class="bi bi-sm ms-auto" aria-hidden="true"><use href="#box-arrow-up-right"></use></svg></a><a class="menu-item" href="https://blog.getbootstrap.com/" target="_blank" rel="noopener">Blog<svg class="bi bi-sm ms-auto" aria-hidden="true"><use href="#box-arrow-up-right"></use></svg></a><hr class="menu-divider"><a class="menu-item" href="https://github.com/twbs" target="_blank" rel="noopener">GitHub<svg class="bi bi-sm ms-auto" aria-hidden="true"><use href="#box-arrow-up-right"></use></svg></a><a class="menu-item" href="https://opencollective.com/bootstrap" target="_blank" rel="noopener">OpenCollective<svg class="bi bi-sm ms-auto" aria-hidden="true"><use href="#box-arrow-up-right"></use></svg></a><a class="menu-item" href="https://x.com/getbootstrap" target="_blank" rel="noopener">Twitter/X<svg class="bi bi-sm ms-auto" aria-hidden="true"><use href="#box-arrow-up-right"></use></svg></a></div></div><ul class="nav navbar-nav flex-row d-none lg:d-flex bd-navbar-nav"><li class="nav-item"><a class="nav-link px-2" href="/docs/6.0/getting-started/install/">Docs</a></li><li class="nav-item"><a class="nav-link px-2" href="https://github.com/twbs/examples/tree/main" target="_blank" rel="noopener">Examples</a></li><li class="nav-item"><a class="nav-link px-2" href="https://icons.getbootstrap.com/" target="_blank" rel="noopener">Icons</a></li><li class="nav-item"><a class="nav-link px-2" href="https://blog.getbootstrap.com/" target="_blank" rel="noopener">Blog</a></li></ul></div><ul class="nav navbar-nav flex-row ms-auto"><li class="bd-search"><button type="button" class="bd-search-trigger" data-bs-toggle="dialog" data-bs-target="#bdSearchDialog" aria-haspopup="dialog" aria-label="Search docs…"><svg class="bi bd-search-trigger-icon" width="16" height="16" aria-hidden="true"><use href="#search"></use></svg><span class="bd-search-trigger-label">Search docs…</span><span class="bd-search-trigger-shortcut" hidden></span></button></li><li class="nav-item"><a class="nav-link px-2 px-1 d-none lg:d-flex" href="https://github.com/twbs" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 499.36" role="img" class="navbar-nav-svg" height="16" width="16"><title>GitHub</title><path fill="currentColor" fill-rule="evenodd" d="M256 0C114.64 0 0 114.61 0 256c0 113.09 73.34 209 175.08 242.9 12.8 2.35 17.47-5.56 17.47-12.34 0-6.08-.22-22.18-.35-43.54-71.2 15.49-86.2-34.34-86.2-34.34-11.64-29.57-28.42-37.45-28.42-37.45-23.27-15.84 1.73-15.55 1.73-15.55 25.69 1.81 39.21 26.38 39.21 26.38 22.84 39.12 59.92 27.82 74.5 21.27 2.33-16.54 8.94-27.82 16.25-34.22-56.84-6.43-116.6-28.43-116.6-126.49 0-27.95 10-50.8 26.35-68.69-2.63-6.48-11.42-32.5 2.51-67.75 0 0 21.49-6.88 70.4 26.24a242.65 242.65 0 0 1 128.18 0c48.87-33.13 70.33-26.24 70.33-26.24 14 35.25 5.18 61.27 2.55 67.75 16.41 17.9 26.31 40.75 26.31 68.69 0 98.35-59.85 120-116.88 126.32 9.19 7.9 17.38 23.53 17.38 47.41 0 34.22-.31 61.83-.31 70.23 0 6.85 4.61 14.81 17.6 12.31C438.72 464.97 512 369.08 512 256.02 512 114.62 397.37 0 256 0z"></path></svg></a></li><li class="nav-item"><button type="button" class="btn btn-link nav-link px-1 gap-1" data-bs-toggle="menu" data-bs-placement="bottom-end" aria-expanded="false">v6.0<svg class="bi bi-sm" aria-hidden="true"><use href="#chevron-expand"></use></svg></button><div class="menu border-keyline" id="bd-versions-menu"><h6 class="menu-header">v6 releases</h6><a class="menu-item active" aria-current="true" href="/">6.0.x <span class="fg-contrast-accent fg-50">(Alpha)</span><svg class="bi ms-auto" aria-hidden="true"><use href="#check2"></use></svg></a><hr class="menu-divider"><h6 class="menu-header">Previous releases</h6><a class="menu-item" href="https://getbootstrap.com/docs/5.3/">v5.3.x<span class="fg-3">(Latest)</span></a><a class="menu-item" href="https://getbootstrap.com/docs/4.6/">v4.6.x</a><a class="menu-item" href="https://getbootstrap.com/docs/3.4/">v3.4.1</a><a class="menu-item" href="https://getbootstrap.com/2.3.2/">v2.3.2</a><hr class="menu-divider"><a class="menu-item" href="/docs/versions/">All versions…</a></div></li><li class="nav-item"><button class="btn btn-link nav-link px-1 gap-1" id="bd-theme" type="button" aria-expanded="false" data-bs-toggle="menu" data-bs-placement="bottom-end" aria-label="Toggle theme (auto)"><svg class="bi theme-icon-active" aria-hidden="true"><use href="#circle-half"></use></svg><span class="visually-hidden">Toggle theme</span><svg class="bi bi-sm" aria-hidden="true"><use href="#chevron-expand"></use></svg></button><div class="menu border-keyline" id="bd-theme-menu" aria-labelledby="bd-theme" style="--bs-menu-min-width: 8rem;"><button type="button" class="menu-item" data-bs-theme-value="light" aria-pressed="false"><svg class="bi opacity-50" aria-hidden="true"><use href="#sun-fill"></use></svg>Light<svg class="bi ms-auto d-none" aria-hidden="true"><use href="#check2"></use></svg></button><button type="button" class="menu-item" data-bs-theme-value="dark" aria-pressed="false"><svg class="bi opacity-50" aria-hidden="true"><use href="#moon-stars-fill"></use></svg>Dark<svg class="bi ms-auto d-none" aria-hidden="true"><use href="#check2"></use></svg></button><button type="button" class="menu-item active" data-bs-theme-value="auto" aria-pressed="true"><svg class="bi opacity-50" aria-hidden="true"><use href="#circle-half"></use></svg>Auto<svg class="bi ms-auto d-none" aria-hidden="true"><use href="#check2"></use></svg></button></div></li></ul></nav></header><dialog class="dialog dialog-lg dialog-search dialog-scrollable" id="bdSearchDialog" aria-labelledby="bdSearchDialog-label"><form class="dialog-header bd-search-form" role="search" autocomplete="off"><label class="visually-hidden" id="bdSearchDialog-label" for="bdSearchDialog-input">Search docs…</label><label class="form-control form-adorn"><span class="form-adorn-icon" aria-hidden="true"><svg class="bi bd-search-form-icon" width="16" height="16" aria-hidden="true"><use href="#search"></use></svg></span><bd-search-input><input id="bdSearchDialog-input" type="search" class="form-ghost bd-search-input" placeholder="Search docs…" autocomplete="off" spellcheck="false" enterkeyhint="search"></bd-search-input></label><button type="button" class="btn-close bd-search-close" data-bs-dismiss="dialog" aria-label="Close"></button></form><div class="dialog-body bd-search-body"><bd-search-results></bd-search-results></div></dialog><script type="module" src="/docs/6.0/assets/Navigation.astro_astro_type_script_index_0_lang.DDEt4Qt4.js"></script></div><div class="bd-masthead mb-3" id="content"><div class="2xl:container bd-gutter"><div class="lg:col-10 mx-auto d-flex flex-column gap-5 align-items-center text-center"><a class="badge badge-subtle badge-lg fs-md fw-normal theme-warning border border-bg border-50 rounded-pill gap-1" href="https://www.herodevs.com/support/nes-bootstrap?utm_source=Bootstrap_site&utm_medium=Banner&utm_campaign=v3and4_eol" rel="noopener" target="_blank">Security updates for Bootstrap 3 &amp; 4<svg class="bi" style="width: 20px; height: 20px;" aria-hidden="true"><use href="#arrow-right-short"></use></svg></a><div class="d-flex flex-column gap-3"><h1 class="fw-semibold lh-1 text-balance">Bootstrap is the open source design system for everyone</h1><p class="md:fs-lg fg-2 mb-0 text-balance">Bootstrap 6 has been rebuilt for today's web as a framework-agnostic design toolkit that anyone—human or AI, novice or pro—can use to build anything. New standards, new components, an updated visual design, CSS-first theming, and more powerful JavaScript plugins.<br><a href="https://blog.getbootstrap.com/" class="underline-30">Learn more on the blog.</a></p></div><div class="d-flex flex-column md:flex-row md:align-items-stretch md:my-2 gap-4"><script type="module" src="/docs/6.0/assets/CodeCopy.astro_astro_type_script_index_0_lang.Dz80MlN5.js"></script><div class="code-copy"><pre class="astro-code astro-code-themes  " style="background-color:light-dark(#ffffff, #0b0c0d);--shiki-light-bg:#ffffff;--shiki-dark-bg:#0b0c0d;color:light-dark(#0b0c0d, #f6f7f8);--shiki-light:#0b0c0d;--shiki-dark:#f6f7f8" tabindex="0"><code><span class="line"><span>npm i bootstrap@6.0.0-alpha.1</span></span></code></pre><button type="button" class="btn btn-xs btn-icon bg-transparent" title="Copy" data-bd-clipboard><svg class="bi fs-md" aria-hidden="true"><use href="#copy"></use></svg></button></div><script type="module">document.querySelectorAll(`[data-bd-agents-copy]`).forEach(e=>{e.addEventListener(`click`,async()=>{let t=e.getAttribute(`data-clipboard-text`);if(!t)return;try{await navigator.clipboard.writeText(t)}catch{return}let n=e.querySelector(`.bi use`),r=n?.getAttribute(`href`);!n||r===`#check2`||(n.setAttribute(`href`,`#check2`),setTimeout(()=>{r&&n.setAttribute(`href`,r)},2e3))})});</script><button class="btn-solid btn-styled theme-inverse btn-lg fw-medium" type="button" data-bs-toggle="menu" data-bs-auto-close="outside" data-bs-placement="bottom-end" aria-expanded="false"><svg class="bi" aria-hidden="true"><use href="#rocket-takeoff-fill"></use></svg>For Agents<svg class="bi me--1" aria-hidden="true"><use href="#chevron-expand"></use></svg></button><div class="menu border-keyline" style="--bs-menu-min-width: 14rem;"><button class="menu-item" type="button" data-bd-agents-copy data-clipboard-text="npx skills add twbs/bootstrap">Install v6 migration skill<svg class="bi bi-sm ms-auto" aria-hidden="true"><use href="#copy"></use></svg></button><hr class="menu-divider border-keyline"><a class="menu-item" href="/docs/6.0/getting-started/ai"> Bootstrap & AI docs </a><a class="menu-item" href="/docs/6.0/getting-started/ai#skills"> Explore all skills </a><hr class="menu-divider border-keyline"><a class="menu-item" href="https://chatgpt.com/?q=Read%20https%3A%2F%2Fgetbootstrap.com%2Fllms.txt%20so%20I%20can%20ask%20questions%20about%20Bootstrap%206." rel="noopener" target="_blank">Ask ChatGPT<svg class="bi bi-sm ms-auto fg-3" aria-hidden="true"><use href="#box-arrow-up-right"></use></svg></a><a class="menu-item" href="https://claude.ai/new?q=Read%20https%3A%2F%2Fgetbootstrap.com%2Fllms.txt%20so%20I%20can%20ask%20questions%20about%20Bootstrap%206." rel="noopener" target="_blank">Ask Claude<svg class="bi bi-sm ms-auto fg-3" aria-hidden="true"><use href="#box-arrow-up-right"></use></svg></a></div><div class="d-flex flex-stretch shadow shadow-accent rounded-7"><a href="/docs/6.0/getting-started/install" class="btn-solid btn-styled theme-accent btn-lg w-100 fw-medium"><svg class="bi" aria-hidden="true"><use href="#book-half"></use></svg>Read the docs</a></div></div><div class="d-flex flex-column md:flex-row gap-2 fg-2"><span>Currently v6.0.0-alpha.1</span><span class="d-none md:d-inline">&middot;</span><a href="https://getbootstrap.com/docs/5.3/" class="theme-secondary underline-50 underline-secondary">Bootstrap 5 docs</a><span class="d-none md:d-inline">&middot;</span><a href="/docs/versions/" class="theme-secondary underline-50 underline-secondary text-nowrap">All releases</a></div><div class="bd-masthead-ad"><script async src="https://cdn.carbonads.com/carbon.js?serve=CKYIKKJL&amp;placement=getbootstrapcom&amp;format=responsive" id="_carbonads_js"></script></div></div></div></div><footer class="bd-footer py-4 md:py-5 mt-5 fg-2"><div class="container bd-gutter"><div class="row"><div class="lg:col-3 mb-3"><a class="d-inline-flex align-items-center mb-2 fg-body text-decoration-none" href="/" aria-label="Bootstrap"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 118 94" role="img" class="d-block me-2" height="32" width="40"><title>Bootstrap</title><path fill-rule="evenodd" clip-rule="evenodd" d="M24.509 0c-6.733 0-11.715 5.893-11.492 12.284.214 6.14-.064 14.092-2.066 20.577C8.943 39.365 5.547 43.485 0 44.014v5.972c5.547.529 8.943 4.649 10.951 11.153 2.002 6.485 2.28 14.437 2.066 20.577C12.794 88.106 17.776 94 24.51 94H93.5c6.733 0 11.714-5.893 11.491-12.284-.214-6.14.064-14.092 2.066-20.577 2.009-6.504 5.396-10.624 10.943-11.153v-5.972c-5.547-.529-8.934-4.649-10.943-11.153-2.002-6.484-2.28-14.437-2.066-20.577C105.214 5.894 100.233 0 93.5 0H24.508zM80 57.863C80 66.663 73.436 72 62.543 72H44a2 2 0 01-2-2V24a2 2 0 012-2h18.437c9.083 0 15.044 4.92 15.044 12.474 0 5.302-4.01 10.049-9.119 10.88v.277C75.317 46.394 80 51.21 80 57.863zM60.521 28.34H49.948v14.934h8.905c6.884 0 10.68-2.772 10.68-7.727 0-4.643-3.264-7.207-9.012-7.207zM49.948 49.2v16.458H60.91c7.167 0 10.964-2.876 10.964-8.281 0-5.406-3.903-8.178-11.425-8.178H49.948z" fill="currentColor"></path></svg><span class="fw-medium">Bootstrap</span></a><ul class="list-unstyled small"><li class="mb-2">Designed and built with all the love in the world by the Bootstrap team with the help of <a href="https://github.com/twbs/bootstrap/graphs/contributors">our contributors</a>.</li><li class="mb-2">Code licensed <a href="https://github.com/twbs/bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener">MIT</a>, docs <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY 3.0</a>.</li><li class="mb-2">Currently v6.0.0-alpha.1.</li></ul></div><div class="col-6 lg:col-2 mb-3 lg:offset-1"><h5>Links</h5><ul class="list-unstyled vstack gap-2 fs-sm"><li><a href="/">Home</a></li><li><a href="/docs/6.0/">Docs</a></li><li><a href="/docs/6.0/examples">Examples</a></li><li><a href="https://icons.getbootstrap.com/">Icons</a></li><li><a href="https://blog.getbootstrap.com/">Blog</a></li><li><a href="https://cottonbureau.com/people/bootstrap" target="_blank" rel="noopener">Swag Store</a></li></ul></div><div class="col-6 lg:col-2 mb-3"><h5>Guides</h5><ul class="list-unstyled vstack gap-2 fs-sm"><li><a href="/docs/6.0/getting-started">Getting started</a></li><li><a href="/docs/6.0/examples/starter-template">Starter template</a></li><li><a href="/docs/6.0/guides/webpack">Webpack</a></li><li><a href="/docs/6.0/guides/parcel">Parcel</a></li><li><a href="/docs/6.0/guides/vite">Vite</a></li></ul></div><div class="col-6 lg:col-2 mb-3"><h5>Projects</h5><ul class="list-unstyled vstack gap-2 fs-sm"><li><a href="https://github.com/twbs/bootstrap" target="_blank" rel="noopener">Bootstrap 6</a></li><li><a href="https://github.com/twbs/bootstrap/tree/v5-dev" target="_blank" rel="noopener">Bootstrap 5</a></li><li><a href="https://github.com/twbs/icons" target="_blank" rel="noopener">Icons</a></li><li><a href="https://github.com/twbs/examples" target="_blank" rel="noopener">Examples repo</a></li></ul></div><div class="col-6 lg:col-2 mb-3"><h5>Community</h5><ul class="list-unstyled vstack gap-2 fs-sm"><li><a href="https://github.com/twbs/bootstrap/issues" target="_blank" rel="noopener">Issues</a></li><li><a href="https://github.com/twbs/bootstrap/discussions" target="_blank" rel="noopener">Discussions</a></li><li><a href="https://github.com/sponsors/twbs" target="_blank" rel="noopener">Corporate sponsors</a></li><li><a href="https://opencollective.com/bootstrap" target="_blank" rel="noopener">Open Collective</a></li><li><a href="https://stackoverflow.com/questions/tagged/bootstrap-5" target="_blank" rel="noopener">Stack Overflow</a></li></ul></div></div></div></footer><script type="module" src="/docs/6.0/assets/Scripts.astro_astro_type_script_index_0_lang.G87Cecqi.js"></script><script type="module" src="/docs/6.0/assets/DocsScripts.astro_astro_type_script_index_0_lang.C1IgVFhS.js"></script></body></html>
